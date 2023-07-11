@@ -70,7 +70,7 @@
             groupBox1.Controls.Add(pictureBox3);
             groupBox1.Location = new Point(-9, -17);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(1182, 599);
+            groupBox1.Size = new Size(1183, 600);
             groupBox1.TabIndex = 10;
             groupBox1.TabStop = false;
             // 
