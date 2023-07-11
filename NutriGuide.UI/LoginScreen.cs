@@ -21,7 +21,7 @@ namespace NutriGuide.UI
             StringBuilder sb = new StringBuilder();
             for (int i = 0; i < text.Length; i++)
             {
-                Thread.Sleep(200);
+                Thread.Sleep(100);
                 sb.Append(text[i]);
                 btnLogin.Text = sb.ToString();
                 Refresh();
@@ -31,12 +31,12 @@ namespace NutriGuide.UI
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            btnLogin.Text = "";
             string text = "LOGIN";
             StringBuilder sb = new StringBuilder();
             for (int i = 0; i < text.Length; i++)
             {
-                var workTimer = new System.Threading.Timer(
-                 null, btnLogin_Click, 200, 200);
+                Thread.Sleep(100);
                 sb.Append(text[i]);
                 btnLogin.Text = sb.ToString();
                 Refresh();
