@@ -8,11 +8,14 @@ namespace NutriGuide.UI
         {
             InitializeComponent();
 
+
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Application.Exit();
+
         }
 
         private void lblSignUp_Click(object sender, EventArgs e)
@@ -22,7 +25,7 @@ namespace NutriGuide.UI
             StringBuilder sb = new StringBuilder();
             for (int i = 0; i < text.Length; i++)
             {
-                Thread.Sleep(100);
+                Thread.Sleep(50);
                 sb.Append(text[i]);
                 btnLogin.Text = sb.ToString();
                 Refresh();
@@ -37,7 +40,7 @@ namespace NutriGuide.UI
             StringBuilder sb = new StringBuilder();
             for (int i = 0; i < text.Length; i++)
             {
-                Thread.Sleep(100);
+                Thread.Sleep(50);
                 sb.Append(text[i]);
                 btnLogin.Text = sb.ToString();
                 Refresh();
@@ -48,6 +51,12 @@ namespace NutriGuide.UI
 
         private void txtPassword_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
 
         }
     }
