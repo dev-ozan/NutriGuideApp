@@ -12,9 +12,39 @@ namespace NutriGuide.UI
 {
     public partial class MainMenu : Form
     {
+        bool panelGizlimi = false;
         public MainMenu()
         {
             InitializeComponent();
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+
+            if (panelGizlimi == false)
+            {
+
+                panel2.Hide();
+                panelGizlimi = true;
+                for (int i = 257; i > 109; i--)
+                {
+                    Thread.Sleep(0);
+                    panel3.Width = i;
+                    label1.Width = i;
+                }
+                
+            }
+            else
+            {
+                panel2.Show();
+                panelGizlimi = false;
+                panel3.Width = 257;
+                label1.Width = 257;
+
+            }
+
         }
     }
 }
