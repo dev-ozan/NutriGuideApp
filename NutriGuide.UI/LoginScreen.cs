@@ -7,6 +7,8 @@ namespace NutriGuide.UI
         public Form1()
         {
             InitializeComponent();
+            
+
 
 
 
@@ -49,7 +51,7 @@ namespace NutriGuide.UI
             if (btnLogin.Text == "LOGIN" && txtPassword.Text != "" && txtUsername.Text != "")
             {
                 
-                MainMenu mainMenu = new MainMenu();
+                MainMenu mainMenu = new MainMenu(txtPassword.Text,txtUsername.Text);
                 mainMenu.Show();
                 this.Hide();
             }
