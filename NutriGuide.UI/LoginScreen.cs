@@ -46,6 +46,21 @@ namespace NutriGuide.UI
                 Refresh();
             }
             // subsequent wait period
+            if (btnLogin.Text == "LOGIN" && txtPassword.Text != "" && txtUsername.Text != "")
+            {
+                
+                MainMenu mainMenu = new MainMenu();
+                mainMenu.Show();
+                this.Hide();
+            }
+            else
+            {
+                // db ye kiþi eklenicek
+            }
+
+
+
+
 
         }
 
