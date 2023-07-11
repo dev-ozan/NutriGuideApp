@@ -6,6 +6,8 @@ namespace NutiGuide
         {
             InitializeComponent();
             // deneme
+
+            // batuhan sinan branchi deneme
         }
     }
 }
