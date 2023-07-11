@@ -5,6 +5,7 @@ namespace NutiGuide
         public Form1()
         {
             InitializeComponent();
+            // deneme
         }
     }
 }
