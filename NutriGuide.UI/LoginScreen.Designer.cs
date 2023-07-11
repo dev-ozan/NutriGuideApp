@@ -65,7 +65,9 @@
             // lblUserName
             // 
             lblUserName.AutoSize = true;
+            lblUserName.BackColor = Color.Transparent;
             lblUserName.Font = new Font("Courier New", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblUserName.ForeColor = Color.FromArgb(238, 238, 238);
             lblUserName.Location = new Point(63, 89);
             lblUserName.Margin = new Padding(4, 0, 4, 0);
             lblUserName.Name = "lblUserName";
@@ -76,7 +78,9 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
             label1.Font = new Font("Courier New", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.ForeColor = Color.FromArgb(238, 238, 238);
             label1.Location = new Point(63, 174);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
@@ -88,6 +92,7 @@
             // 
             lblYazi.AutoSize = true;
             lblYazi.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            lblYazi.ForeColor = Color.FromArgb(238, 238, 238);
             lblYazi.Location = new Point(123, 324);
             lblYazi.Margin = new Padding(4, 0, 4, 0);
             lblYazi.Name = "lblYazi";
@@ -99,6 +104,7 @@
             // 
             lblSignUp.AutoSize = true;
             lblSignUp.Font = new Font("Courier New", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblSignUp.ForeColor = Color.FromArgb(0, 173, 181);
             lblSignUp.Location = new Point(277, 322);
             lblSignUp.Margin = new Padding(4, 0, 4, 0);
             lblSignUp.Name = "lblSignUp";
@@ -126,28 +132,34 @@
             // 
             // pictureBox5
             // 
-            pictureBox5.BackColor = SystemColors.ActiveCaptionText;
+            pictureBox5.BackColor = SystemColors.Window;
+            pictureBox5.Image = Properties.Resources.padlock;
             pictureBox5.Location = new Point(415, 203);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(32, 31);
+            pictureBox5.Size = new Size(32, 30);
+            pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox5.TabIndex = 11;
             pictureBox5.TabStop = false;
             // 
             // pictureBox4
             // 
-            pictureBox4.BackColor = SystemColors.ActiveCaptionText;
-            pictureBox4.Location = new Point(415, 117);
+            pictureBox4.BackColor = SystemColors.Window;
+            pictureBox4.Image = Properties.Resources.user;
+            pictureBox4.Location = new Point(415, 118);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(32, 32);
+            pictureBox4.Size = new Size(32, 30);
+            pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox4.TabIndex = 10;
             pictureBox4.TabStop = false;
             // 
             // pictureBox2
             // 
-            pictureBox2.BackColor = SystemColors.ActiveCaptionText;
-            pictureBox2.Location = new Point(184, 19);
+            pictureBox2.BackColor = Color.Transparent;
+            pictureBox2.Image = Properties.Resources._lock;
+            pictureBox2.Location = new Point(177, 15);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(100, 50);
+            pictureBox2.Size = new Size(158, 64);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 9;
             pictureBox2.TabStop = false;
             // 
@@ -172,12 +184,15 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.BackColor = SystemColors.ActiveCaptionText;
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.Image = Properties.Resources.close_1;
             pictureBox1.Location = new Point(1116, 12);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(32, 31);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 8;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // panel2
             // 
@@ -190,7 +205,7 @@
             // pictureBox3
             // 
             pictureBox3.BackColor = SystemColors.Control;
-            pictureBox3.Image = Properties.Resources.NGLogo;
+            pictureBox3.Image = Properties.Resources.diet;
             pictureBox3.Location = new Point(18, 19);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(491, 330);
@@ -202,7 +217,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.Control;
+            BackColor = Color.FromArgb(34, 40, 49);
             ClientSize = new Size(1160, 567);
             ControlBox = false;
             Controls.Add(panel2);
