@@ -142,7 +142,7 @@
             lblSignUp.AutoSize = true;
             lblSignUp.Font = new Font("Courier New", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblSignUp.ForeColor = Color.FromArgb(0, 173, 181);
-            lblSignUp.Location = new Point(237, 367);
+            lblSignUp.Location = new Point(246, 367);
             lblSignUp.Margin = new Padding(4, 0, 4, 0);
             lblSignUp.Name = "lblSignUp";
             lblSignUp.Size = new Size(88, 18);
@@ -152,13 +152,12 @@
             // 
             // lblYazi
             // 
-            lblYazi.AutoSize = true;
             lblYazi.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             lblYazi.ForeColor = Color.FromArgb(34, 40, 49);
-            lblYazi.Location = new Point(83, 369);
+            lblYazi.Location = new Point(74, 367);
             lblYazi.Margin = new Padding(4, 0, 4, 0);
             lblYazi.Name = "lblYazi";
-            lblYazi.Size = new Size(146, 16);
+            lblYazi.Size = new Size(164, 16);
             lblYazi.TabIndex = 5;
             lblYazi.Text = "Don't have an account?";
             // 
