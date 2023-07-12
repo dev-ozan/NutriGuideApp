@@ -20,7 +20,7 @@ namespace NutriGuide.Entity.Data
         public int Boyu { get; set; }
         public int HedefKilosu { get; set; }
         public KullaniciTipi KullaniciTipi { get; set; }
-
+        public string? Diyetler { get; set; }
 
         public List<Food> Foods { get; set; } = new();
 
