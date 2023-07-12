@@ -17,34 +17,9 @@ namespace NutriGuide.UI
         public MainMenu(string a, string b)
         {
             InitializeComponent();
-            label3.Text = a.ToString();
-            label4.Text = b.ToString();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            if (panelGizlimi == false)
-            {
-                panel2.Hide();
-                for (int i = 258; i >= 70; i--)
-                {
-                    panel3.Width = i;
-                    button5.Width = i + 3;
-                }
-                panelGizlimi = true;
-            }
-            else if (panel3.Width == 70)
-            {
-                panelGizlimi = false;
-                for (int i = 70; i <= 258; i++)
-                {
-                    panel3.Width = i;
-                    button5.Width = i;
-                }
-                button5.Width = button5.Width + 3;
-                panel2.Show();
-            }
-            label2.Text = panel3.Width.ToString();
+            lblKullaniciAd.Text = a.ToString();
+            lblSaat.Text = DateTime.Now.ToString();
+            timer1.Start();
         }
 
         private void OpenChildForm(Form childForm)
@@ -63,29 +38,64 @@ namespace NutriGuide.UI
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnAnaMenu_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.AnaMenu());
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void btnProfile_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.Profile());
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnDiyetPlan_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.DietPlani());
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
+        private void btnYemekler_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            OpenChildForm(new Forms.Besinler());
+        }
+
+        private void btnInfo_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Forms.Infos());
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblSaat.Text = DateTime.Now.ToString();
+        }
+
+        private void btnMenuSide_Click(object sender, EventArgs e)
+        {
+            if (panelGizlimi == false)
+            {
+                panel2.Hide();
+                for (int i = 258; i >= 70; i--)
+                {
+                    panel3.Width = i;
+                    btnMenuSide.Width = i + 3;
+                }
+                panelGizlimi = true;
+            }
+            else if (panel3.Width == 70)
+            {
+                panelGizlimi = false;
+                for (int i = 70; i <= 258; i++)
+                {
+                    panel3.Width = i;
+                    btnMenuSide.Width = i;
+                }
+                btnMenuSide.Width = btnMenuSide.Width + 3;
+                panel2.Show();
+            }
         }
     }
 }

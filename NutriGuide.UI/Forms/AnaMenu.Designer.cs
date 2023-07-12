@@ -31,12 +31,12 @@
             label1 = new Label();
             label2 = new Label();
             pictureBox1 = new PictureBox();
-            label3 = new Label();
+            lblKalori = new Label();
             label4 = new Label();
             pictureBox2 = new PictureBox();
-            listBox1 = new ListBox();
-            label5 = new Label();
-            label6 = new Label();
+            lstTuketilenler = new ListBox();
+            lblAdSoyad = new Label();
+            lblKullaniciAd = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
@@ -71,14 +71,14 @@
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
             // 
-            // label3
+            // lblKalori
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(64, 162);
-            label3.Name = "label3";
-            label3.Size = new Size(37, 15);
-            label3.TabIndex = 3;
-            label3.Text = "Kalori";
+            lblKalori.AutoSize = true;
+            lblKalori.Location = new Point(64, 162);
+            lblKalori.Name = "lblKalori";
+            lblKalori.Size = new Size(37, 15);
+            lblKalori.TabIndex = 3;
+            lblKalori.Text = "Kalori";
             // 
             // label4
             // 
@@ -100,35 +100,35 @@
             pictureBox2.TabIndex = 5;
             pictureBox2.TabStop = false;
             // 
-            // listBox1
+            // lstTuketilenler
             // 
-            listBox1.BackColor = SystemColors.Menu;
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 15;
-            listBox1.Location = new Point(271, 162);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(162, 109);
-            listBox1.TabIndex = 6;
+            lstTuketilenler.BackColor = SystemColors.Menu;
+            lstTuketilenler.FormattingEnabled = true;
+            lstTuketilenler.ItemHeight = 15;
+            lstTuketilenler.Location = new Point(271, 162);
+            lstTuketilenler.Name = "lstTuketilenler";
+            lstTuketilenler.Size = new Size(162, 109);
+            lstTuketilenler.TabIndex = 6;
             // 
-            // label5
+            // lblAdSoyad
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(266, 91);
-            label5.Name = "label5";
-            label5.Size = new Size(58, 20);
-            label5.TabIndex = 8;
-            label5.Text = "*******";
+            lblAdSoyad.AutoSize = true;
+            lblAdSoyad.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            lblAdSoyad.Location = new Point(266, 91);
+            lblAdSoyad.Name = "lblAdSoyad";
+            lblAdSoyad.Size = new Size(58, 20);
+            lblAdSoyad.TabIndex = 8;
+            lblAdSoyad.Text = "*******";
             // 
-            // label6
+            // lblKullaniciAd
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.Location = new Point(268, 53);
-            label6.Name = "label6";
-            label6.Size = new Size(58, 20);
-            label6.TabIndex = 7;
-            label6.Text = "*******";
+            lblKullaniciAd.AutoSize = true;
+            lblKullaniciAd.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            lblKullaniciAd.Location = new Point(268, 53);
+            lblKullaniciAd.Name = "lblKullaniciAd";
+            lblKullaniciAd.Size = new Size(58, 20);
+            lblKullaniciAd.TabIndex = 7;
+            lblKullaniciAd.Text = "*******";
             // 
             // AnaMenu
             // 
@@ -136,12 +136,12 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(238, 238, 238);
             ClientSize = new Size(525, 348);
-            Controls.Add(label5);
-            Controls.Add(label6);
-            Controls.Add(listBox1);
+            Controls.Add(lblAdSoyad);
+            Controls.Add(lblKullaniciAd);
+            Controls.Add(lstTuketilenler);
             Controls.Add(pictureBox2);
             Controls.Add(label4);
-            Controls.Add(label3);
+            Controls.Add(lblKalori);
             Controls.Add(pictureBox1);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -158,11 +158,11 @@
         private Label label1;
         private Label label2;
         private PictureBox pictureBox1;
-        private Label label3;
+        private Label lblKalori;
         private Label label4;
         private PictureBox pictureBox2;
-        private ListBox listBox1;
-        private Label label5;
-        private Label label6;
+        private ListBox lstTuketilenler;
+        private Label lblAdSoyad;
+        private Label lblKullaniciAd;
     }
 }

@@ -35,16 +35,16 @@
             label6 = new Label();
             label7 = new Label();
             label8 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
-            dateTimePicker1 = new DateTimePicker();
-            label9 = new Label();
+            txtAd = new TextBox();
+            txtSoyad = new TextBox();
+            txtBoy = new TextBox();
+            txtKilo = new TextBox();
+            txtHedefKilo = new TextBox();
+            dtpDogumTarih = new DateTimePicker();
+            lblKullaniciAd = new Label();
             label10 = new Label();
-            comboBox1 = new ComboBox();
-            button1 = new Button();
+            cmbCinsiyet = new ComboBox();
+            btnGuncelle = new Button();
             SuspendLayout();
             // 
             // label2
@@ -117,65 +117,65 @@
             label8.TabIndex = 6;
             label8.Text = "Kullanıcı ID:";
             // 
-            // textBox1
+            // txtAd
             // 
-            textBox1.Font = new Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(142, 157);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(182, 25);
-            textBox1.TabIndex = 7;
+            txtAd.Font = new Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtAd.Location = new Point(142, 157);
+            txtAd.Name = "txtAd";
+            txtAd.Size = new Size(182, 25);
+            txtAd.TabIndex = 7;
             // 
-            // textBox2
+            // txtSoyad
             // 
-            textBox2.Font = new Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox2.Location = new Point(142, 202);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(182, 25);
-            textBox2.TabIndex = 8;
+            txtSoyad.Font = new Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtSoyad.Location = new Point(142, 202);
+            txtSoyad.Name = "txtSoyad";
+            txtSoyad.Size = new Size(182, 25);
+            txtSoyad.TabIndex = 8;
             // 
-            // textBox3
+            // txtBoy
             // 
-            textBox3.Font = new Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox3.Location = new Point(517, 157);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(182, 25);
-            textBox3.TabIndex = 9;
+            txtBoy.Font = new Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtBoy.Location = new Point(517, 157);
+            txtBoy.Name = "txtBoy";
+            txtBoy.Size = new Size(182, 25);
+            txtBoy.TabIndex = 9;
             // 
-            // textBox4
+            // txtKilo
             // 
-            textBox4.Font = new Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox4.Location = new Point(517, 202);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(182, 25);
-            textBox4.TabIndex = 10;
+            txtKilo.Font = new Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtKilo.Location = new Point(517, 202);
+            txtKilo.Name = "txtKilo";
+            txtKilo.Size = new Size(182, 25);
+            txtKilo.TabIndex = 10;
             // 
-            // textBox5
+            // txtHedefKilo
             // 
-            textBox5.Font = new Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox5.Location = new Point(517, 248);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(182, 25);
-            textBox5.TabIndex = 11;
+            txtHedefKilo.Font = new Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtHedefKilo.Location = new Point(517, 248);
+            txtHedefKilo.Name = "txtHedefKilo";
+            txtHedefKilo.Size = new Size(182, 25);
+            txtHedefKilo.TabIndex = 11;
             // 
-            // dateTimePicker1
+            // dtpDogumTarih
             // 
-            dateTimePicker1.CalendarFont = new Font("Arial", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            dateTimePicker1.CustomFormat = "dd.MM.yyyy";
-            dateTimePicker1.Format = DateTimePickerFormat.Short;
-            dateTimePicker1.Location = new Point(142, 248);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(182, 25);
-            dateTimePicker1.TabIndex = 12;
+            dtpDogumTarih.CalendarFont = new Font("Arial", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            dtpDogumTarih.CustomFormat = "dd.MM.yyyy";
+            dtpDogumTarih.Format = DateTimePickerFormat.Short;
+            dtpDogumTarih.Location = new Point(142, 248);
+            dtpDogumTarih.Name = "dtpDogumTarih";
+            dtpDogumTarih.Size = new Size(182, 25);
+            dtpDogumTarih.TabIndex = 12;
             // 
-            // label9
+            // lblKullaniciAd
             // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label9.Location = new Point(142, 71);
-            label9.Name = "label9";
-            label9.Size = new Size(62, 18);
-            label9.TabIndex = 13;
-            label9.Text = "*********";
+            lblKullaniciAd.AutoSize = true;
+            lblKullaniciAd.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblKullaniciAd.Location = new Point(142, 71);
+            lblKullaniciAd.Name = "lblKullaniciAd";
+            lblKullaniciAd.Size = new Size(62, 18);
+            lblKullaniciAd.TabIndex = 13;
+            lblKullaniciAd.Text = "*********";
             // 
             // label10
             // 
@@ -187,22 +187,22 @@
             label10.TabIndex = 14;
             label10.Text = "Cinsiyet:";
             // 
-            // comboBox1
+            // cmbCinsiyet
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(142, 295);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(182, 25);
-            comboBox1.TabIndex = 15;
+            cmbCinsiyet.FormattingEnabled = true;
+            cmbCinsiyet.Location = new Point(142, 295);
+            cmbCinsiyet.Name = "cmbCinsiyet";
+            cmbCinsiyet.Size = new Size(182, 25);
+            cmbCinsiyet.TabIndex = 15;
             // 
-            // button1
+            // btnGuncelle
             // 
-            button1.Location = new Point(517, 369);
-            button1.Name = "button1";
-            button1.Size = new Size(182, 39);
-            button1.TabIndex = 16;
-            button1.Text = "EKLE";
-            button1.UseVisualStyleBackColor = true;
+            btnGuncelle.Location = new Point(517, 369);
+            btnGuncelle.Name = "btnGuncelle";
+            btnGuncelle.Size = new Size(182, 39);
+            btnGuncelle.TabIndex = 16;
+            btnGuncelle.Text = "EKLE";
+            btnGuncelle.UseVisualStyleBackColor = true;
             // 
             // Profile
             // 
@@ -210,16 +210,16 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(238, 238, 238);
             ClientSize = new Size(823, 432);
-            Controls.Add(button1);
-            Controls.Add(comboBox1);
+            Controls.Add(btnGuncelle);
+            Controls.Add(cmbCinsiyet);
             Controls.Add(label10);
-            Controls.Add(label9);
-            Controls.Add(dateTimePicker1);
-            Controls.Add(textBox5);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(lblKullaniciAd);
+            Controls.Add(dtpDogumTarih);
+            Controls.Add(txtHedefKilo);
+            Controls.Add(txtKilo);
+            Controls.Add(txtBoy);
+            Controls.Add(txtSoyad);
+            Controls.Add(txtAd);
             Controls.Add(label8);
             Controls.Add(label7);
             Controls.Add(label6);
@@ -244,15 +244,15 @@
         private Label label6;
         private Label label7;
         private Label label8;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
-        private DateTimePicker dateTimePicker1;
-        private Label label9;
+        private TextBox txtAd;
+        private TextBox txtSoyad;
+        private TextBox txtBoy;
+        private TextBox txtKilo;
+        private TextBox txtHedefKilo;
+        private DateTimePicker dtpDogumTarih;
+        private Label lblKullaniciAd;
         private Label label10;
-        private ComboBox comboBox1;
-        private Button button1;
+        private ComboBox cmbCinsiyet;
+        private Button btnGuncelle;
     }
 }

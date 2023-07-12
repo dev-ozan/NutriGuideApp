@@ -28,23 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button5 = new Button();
+            components = new System.ComponentModel.Container();
+            btnMenuSide = new Button();
             panel2 = new Panel();
-            button4 = new Button();
-            button3 = new Button();
-            button2 = new Button();
-            button1 = new Button();
+            btnInfo = new Button();
+            btnYemekler = new Button();
+            btnDiyetPlan = new Button();
+            btnProfile = new Button();
+            btnAnaMenu = new Button();
             panel3 = new Panel();
             label2 = new Label();
-            label1 = new Label();
+            lblNutriGuide = new Label();
             panel5 = new Panel();
             pictureBox3 = new PictureBox();
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
             panel1 = new Panel();
-            label4 = new Label();
-            label3 = new Label();
+            lblSaat = new Label();
+            lblKullaniciAd = new Label();
             pnlChildForm = new Panel();
+            timer1 = new System.Windows.Forms.Timer(components);
             panel2.SuspendLayout();
             panel3.SuspendLayout();
             panel5.SuspendLayout();
@@ -54,115 +57,146 @@
             panel1.SuspendLayout();
             SuspendLayout();
             // 
-            // button5
+            // btnMenuSide
             // 
-            button5.BackColor = Color.FromArgb(34, 40, 49);
-            button5.Cursor = Cursors.Hand;
-            button5.FlatAppearance.BorderSize = 0;
-            button5.FlatStyle = FlatStyle.Flat;
-            button5.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button5.ForeColor = Color.FromArgb(238, 238, 238);
-            button5.Location = new Point(-2, -7);
-            button5.Margin = new Padding(4);
-            button5.Name = "button5";
-            button5.Size = new Size(259, 88);
-            button5.TabIndex = 0;
-            button5.Text = "Menu";
-            button5.UseVisualStyleBackColor = false;
-            button5.Click += button5_Click;
+            btnMenuSide.BackColor = Color.FromArgb(34, 40, 49);
+            btnMenuSide.Cursor = Cursors.Hand;
+            btnMenuSide.FlatAppearance.BorderSize = 0;
+            btnMenuSide.FlatStyle = FlatStyle.Flat;
+            btnMenuSide.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnMenuSide.ForeColor = Color.FromArgb(238, 238, 238);
+            btnMenuSide.Location = new Point(-2, -7);
+            btnMenuSide.Margin = new Padding(4);
+            btnMenuSide.Name = "btnMenuSide";
+            btnMenuSide.Size = new Size(259, 88);
+            btnMenuSide.TabIndex = 0;
+            btnMenuSide.Text = "Menu";
+            btnMenuSide.UseVisualStyleBackColor = false;
+            btnMenuSide.Click += btnMenuSide_Click;
             // 
             // panel2
             // 
-            panel2.Controls.Add(button4);
-            panel2.Controls.Add(button3);
-            panel2.Controls.Add(button2);
-            panel2.Controls.Add(button1);
+            panel2.Controls.Add(btnInfo);
+            panel2.Controls.Add(btnYemekler);
+            panel2.Controls.Add(btnDiyetPlan);
+            panel2.Controls.Add(btnProfile);
+            panel2.Controls.Add(btnAnaMenu);
             panel2.Location = new Point(0, 122);
             panel2.Margin = new Padding(4);
             panel2.Name = "panel2";
-            panel2.Size = new Size(257, 229);
+            panel2.Size = new Size(257, 282);
             panel2.TabIndex = 1;
             // 
-            // button4
+            // btnInfo
             // 
-            button4.AutoEllipsis = true;
-            button4.BackColor = Color.FromArgb(34, 40, 49);
-            button4.Cursor = Cursors.Hand;
-            button4.FlatAppearance.BorderSize = 0;
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            button4.ForeColor = Color.FromArgb(238, 238, 238);
-            button4.Location = new Point(-4, 148);
-            button4.Margin = new Padding(4);
-            button4.Name = "button4";
-            button4.Size = new Size(261, 48);
-            button4.TabIndex = 3;
-            button4.Text = "button4";
-            button4.UseVisualStyleBackColor = false;
-            button4.Click += button4_Click;
+            btnInfo.AutoEllipsis = true;
+            btnInfo.BackColor = Color.FromArgb(34, 40, 49);
+            btnInfo.Cursor = Cursors.Hand;
+            btnInfo.FlatAppearance.BorderSize = 0;
+            btnInfo.FlatStyle = FlatStyle.Flat;
+            btnInfo.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnInfo.ForeColor = Color.FromArgb(238, 238, 238);
+            btnInfo.Image = Properties.Resources.info_6_32;
+            btnInfo.ImageAlign = ContentAlignment.MiddleLeft;
+            btnInfo.Location = new Point(13, 204);
+            btnInfo.Margin = new Padding(4);
+            btnInfo.Name = "btnInfo";
+            btnInfo.Size = new Size(244, 48);
+            btnInfo.TabIndex = 4;
+            btnInfo.Text = "               Hakkımızda";
+            btnInfo.TextAlign = ContentAlignment.MiddleLeft;
+            btnInfo.UseVisualStyleBackColor = false;
+            btnInfo.Click += btnInfo_Click;
             // 
-            // button3
+            // btnYemekler
             // 
-            button3.AutoEllipsis = true;
-            button3.BackColor = Color.FromArgb(34, 40, 49);
-            button3.Cursor = Cursors.Hand;
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            button3.ForeColor = Color.FromArgb(238, 238, 238);
-            button3.Location = new Point(-2, 98);
-            button3.Margin = new Padding(4);
-            button3.Name = "button3";
-            button3.Size = new Size(261, 48);
-            button3.TabIndex = 2;
-            button3.Text = "button3";
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click;
+            btnYemekler.AutoEllipsis = true;
+            btnYemekler.BackColor = Color.FromArgb(34, 40, 49);
+            btnYemekler.Cursor = Cursors.Hand;
+            btnYemekler.FlatAppearance.BorderSize = 0;
+            btnYemekler.FlatStyle = FlatStyle.Flat;
+            btnYemekler.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnYemekler.ForeColor = Color.FromArgb(238, 238, 238);
+            btnYemekler.Image = Properties.Resources.restaurant_3_32;
+            btnYemekler.ImageAlign = ContentAlignment.MiddleLeft;
+            btnYemekler.Location = new Point(13, 148);
+            btnYemekler.Margin = new Padding(4);
+            btnYemekler.Name = "btnYemekler";
+            btnYemekler.Size = new Size(244, 48);
+            btnYemekler.TabIndex = 3;
+            btnYemekler.Text = "               Yemekler";
+            btnYemekler.TextAlign = ContentAlignment.MiddleLeft;
+            btnYemekler.UseVisualStyleBackColor = false;
+            btnYemekler.Click += btnYemekler_Click;
             // 
-            // button2
+            // btnDiyetPlan
             // 
-            button2.AutoEllipsis = true;
-            button2.BackColor = Color.FromArgb(34, 40, 49);
-            button2.Cursor = Cursors.Hand;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.ForeColor = Color.FromArgb(238, 238, 238);
-            button2.Location = new Point(-2, 49);
-            button2.Margin = new Padding(4);
-            button2.Name = "button2";
-            button2.Size = new Size(261, 48);
-            button2.TabIndex = 1;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
+            btnDiyetPlan.AutoEllipsis = true;
+            btnDiyetPlan.BackColor = Color.FromArgb(34, 40, 49);
+            btnDiyetPlan.Cursor = Cursors.Hand;
+            btnDiyetPlan.FlatAppearance.BorderSize = 0;
+            btnDiyetPlan.FlatStyle = FlatStyle.Flat;
+            btnDiyetPlan.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnDiyetPlan.ForeColor = Color.FromArgb(238, 238, 238);
+            btnDiyetPlan.Image = Properties.Resources.banana_3_32;
+            btnDiyetPlan.ImageAlign = ContentAlignment.MiddleLeft;
+            btnDiyetPlan.Location = new Point(13, 98);
+            btnDiyetPlan.Margin = new Padding(4);
+            btnDiyetPlan.Name = "btnDiyetPlan";
+            btnDiyetPlan.Size = new Size(246, 48);
+            btnDiyetPlan.TabIndex = 2;
+            btnDiyetPlan.Text = "               Diyet Planı";
+            btnDiyetPlan.TextAlign = ContentAlignment.MiddleLeft;
+            btnDiyetPlan.UseVisualStyleBackColor = false;
+            btnDiyetPlan.Click += btnDiyetPlan_Click;
             // 
-            // button1
+            // btnProfile
             // 
-            button1.AutoEllipsis = true;
-            button1.BackColor = Color.FromArgb(34, 40, 49);
-            button1.BackgroundImageLayout = ImageLayout.Zoom;
-            button1.Cursor = Cursors.Hand;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.ForeColor = Color.FromArgb(238, 238, 238);
-            button1.Image = Properties.Resources.home__1_;
-            button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(13, -8);
-            button1.Margin = new Padding(4);
-            button1.Name = "button1";
-            button1.Size = new Size(246, 56);
-            button1.TabIndex = 0;
-            button1.Text = "               Ana Menu";
-            button1.TextAlign = ContentAlignment.MiddleLeft;
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            btnProfile.AutoEllipsis = true;
+            btnProfile.BackColor = Color.FromArgb(34, 40, 49);
+            btnProfile.Cursor = Cursors.Hand;
+            btnProfile.FlatAppearance.BorderSize = 0;
+            btnProfile.FlatStyle = FlatStyle.Flat;
+            btnProfile.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnProfile.ForeColor = Color.FromArgb(238, 238, 238);
+            btnProfile.Image = Properties.Resources.user_32;
+            btnProfile.ImageAlign = ContentAlignment.MiddleLeft;
+            btnProfile.Location = new Point(13, 49);
+            btnProfile.Margin = new Padding(4);
+            btnProfile.Name = "btnProfile";
+            btnProfile.Size = new Size(246, 48);
+            btnProfile.TabIndex = 1;
+            btnProfile.Text = "               Profil";
+            btnProfile.TextAlign = ContentAlignment.MiddleLeft;
+            btnProfile.UseVisualStyleBackColor = false;
+            btnProfile.Click += btnProfile_Click;
+            // 
+            // btnAnaMenu
+            // 
+            btnAnaMenu.AutoEllipsis = true;
+            btnAnaMenu.BackColor = Color.FromArgb(34, 40, 49);
+            btnAnaMenu.BackgroundImageLayout = ImageLayout.Zoom;
+            btnAnaMenu.Cursor = Cursors.Hand;
+            btnAnaMenu.FlatAppearance.BorderSize = 0;
+            btnAnaMenu.FlatStyle = FlatStyle.Flat;
+            btnAnaMenu.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnAnaMenu.ForeColor = Color.FromArgb(238, 238, 238);
+            btnAnaMenu.Image = Properties.Resources.home_5_32;
+            btnAnaMenu.ImageAlign = ContentAlignment.MiddleLeft;
+            btnAnaMenu.Location = new Point(13, -8);
+            btnAnaMenu.Margin = new Padding(4);
+            btnAnaMenu.Name = "btnAnaMenu";
+            btnAnaMenu.Size = new Size(246, 56);
+            btnAnaMenu.TabIndex = 0;
+            btnAnaMenu.Text = "               Ana Menu";
+            btnAnaMenu.TextAlign = ContentAlignment.MiddleLeft;
+            btnAnaMenu.UseVisualStyleBackColor = false;
+            btnAnaMenu.Click += btnAnaMenu_Click;
             // 
             // panel3
             // 
             panel3.BackColor = Color.FromArgb(34, 40, 49);
-            panel3.Controls.Add(button5);
+            panel3.Controls.Add(btnMenuSide);
             panel3.Controls.Add(label2);
             panel3.Controls.Add(panel2);
             panel3.Location = new Point(0, 114);
@@ -180,18 +214,18 @@
             label2.TabIndex = 5;
             label2.Text = "label2";
             // 
-            // label1
+            // lblNutriGuide
             // 
-            label1.BackColor = Color.FromArgb(34, 40, 49);
-            label1.Font = new Font("Bauhaus 93", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.ForeColor = Color.FromArgb(238, 238, 238);
-            label1.Location = new Point(0, 0);
-            label1.Margin = new Padding(4, 0, 4, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(257, 114);
-            label1.TabIndex = 4;
-            label1.Text = "\r\nNutri Guide";
-            label1.TextAlign = ContentAlignment.TopCenter;
+            lblNutriGuide.BackColor = Color.FromArgb(34, 40, 49);
+            lblNutriGuide.Font = new Font("Bauhaus 93", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            lblNutriGuide.ForeColor = Color.FromArgb(238, 238, 238);
+            lblNutriGuide.Location = new Point(0, 0);
+            lblNutriGuide.Margin = new Padding(4, 0, 4, 0);
+            lblNutriGuide.Name = "lblNutriGuide";
+            lblNutriGuide.Size = new Size(257, 114);
+            lblNutriGuide.TabIndex = 4;
+            lblNutriGuide.Text = "\r\nNutri Guide";
+            lblNutriGuide.TextAlign = ContentAlignment.TopCenter;
             // 
             // panel5
             // 
@@ -200,7 +234,7 @@
             panel5.Controls.Add(pictureBox2);
             panel5.Controls.Add(pictureBox1);
             panel5.Controls.Add(panel1);
-            panel5.Controls.Add(label1);
+            panel5.Controls.Add(lblNutriGuide);
             panel5.Dock = DockStyle.Top;
             panel5.Location = new Point(0, 0);
             panel5.Margin = new Padding(4);
@@ -242,34 +276,34 @@
             // 
             // panel1
             // 
-            panel1.Controls.Add(label4);
-            panel1.Controls.Add(label3);
+            panel1.Controls.Add(lblSaat);
+            panel1.Controls.Add(lblKullaniciAd);
             panel1.Location = new Point(710, 17);
             panel1.Name = "panel1";
             panel1.Size = new Size(198, 83);
             panel1.TabIndex = 5;
             // 
-            // label4
+            // lblSaat
             // 
-            label4.BackColor = Color.FromArgb(0, 173, 181);
-            label4.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.ForeColor = Color.FromArgb(34, 40, 49);
-            label4.Location = new Point(3, 46);
-            label4.Name = "label4";
-            label4.Size = new Size(192, 28);
-            label4.TabIndex = 1;
-            label4.Text = "label4";
+            lblSaat.BackColor = Color.FromArgb(0, 173, 181);
+            lblSaat.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblSaat.ForeColor = Color.FromArgb(34, 40, 49);
+            lblSaat.Location = new Point(3, 39);
+            lblSaat.Name = "lblSaat";
+            lblSaat.Size = new Size(192, 28);
+            lblSaat.TabIndex = 1;
+            lblSaat.Text = "label3";
             // 
-            // label3
+            // lblKullaniciAd
             // 
-            label3.BackColor = Color.FromArgb(0, 173, 181);
-            label3.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.ForeColor = Color.FromArgb(34, 40, 49);
-            label3.Location = new Point(3, 9);
-            label3.Name = "label3";
-            label3.Size = new Size(192, 28);
-            label3.TabIndex = 0;
-            label3.Text = "label3";
+            lblKullaniciAd.BackColor = Color.FromArgb(0, 173, 181);
+            lblKullaniciAd.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblKullaniciAd.ForeColor = Color.FromArgb(34, 40, 49);
+            lblKullaniciAd.Location = new Point(3, 9);
+            lblKullaniciAd.Name = "lblKullaniciAd";
+            lblKullaniciAd.Size = new Size(192, 28);
+            lblKullaniciAd.TabIndex = 0;
+            lblKullaniciAd.Text = "label3";
             // 
             // pnlChildForm
             // 
@@ -277,6 +311,10 @@
             pnlChildForm.Name = "pnlChildForm";
             pnlChildForm.Size = new Size(737, 420);
             pnlChildForm.TabIndex = 5;
+            // 
+            // timer1
+            // 
+            timer1.Tick += timer1_Tick;
             // 
             // MainMenu
             // 
@@ -303,22 +341,24 @@
         }
 
         #endregion
-        private Button button5;
+        private Button btnMenuSide;
         private Panel panel2;
-        private Button button4;
-        private Button button3;
-        private Button button2;
-        private Button button1;
+        private Button btnYemekler;
+        private Button btnDiyetPlan;
+        private Button btnProfile;
+        private Button btnAnaMenu;
         private Panel panel3;
-        private Label label1;
+        private Label lblNutriGuide;
         private Panel panel5;
         private Label label2;
         private Panel panel1;
-        private Label label4;
-        private Label label3;
+        private Label lblKullaniciAd;
         private Panel pnlChildForm;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;
+        private Button btnInfo;
+        private System.Windows.Forms.Timer timer1;
+        private Label lblSaat;
     }
 }
