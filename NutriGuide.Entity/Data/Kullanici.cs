@@ -14,6 +14,8 @@ namespace NutriGuide.Entity.Data
         public string? Soyad { get; set; }
         public string? Cinsiyet { get; set; }
         public DateTime DogumTarihi { get; set; }
+        public DateTime DietBaslamaTarihi { get; set; }
+        public DateTime DietBitisTarihi { get; set; }
         public int Kilosu { get; set; }
         public int Boyu { get; set; }
         public int HedefKilosu { get; set; }
