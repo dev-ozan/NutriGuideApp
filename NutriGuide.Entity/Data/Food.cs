@@ -19,5 +19,6 @@ namespace NutriGuide.Entity.Data
         public KullaniciTipi KullaniciTipi { get; set; }
 
         public List<Kullanici> Kullanicilar { get; set; } = new();
+        public List<Diyetler> Diyetler { get; set; } = new();
     }
 }
