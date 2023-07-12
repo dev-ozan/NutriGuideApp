@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NutriGuide.DataAccessLayer"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NutriGuide.BusinessLayer", "NutriGuide.BusinessLayer\NutriGuide.BusinessLayer.csproj", "{4AD8FF65-B082-4966-8076-E43A5FD14C36}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NutriGuide.Entity", "NutriGuide.Entity\NutriGuide.Entity.csproj", "{D1D4D4AA-34AF-4550-BA31-9A169895453D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{4AD8FF65-B082-4966-8076-E43A5FD14C36}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4AD8FF65-B082-4966-8076-E43A5FD14C36}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4AD8FF65-B082-4966-8076-E43A5FD14C36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1D4D4AA-34AF-4550-BA31-9A169895453D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1D4D4AA-34AF-4550-BA31-9A169895453D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1D4D4AA-34AF-4550-BA31-9A169895453D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1D4D4AA-34AF-4550-BA31-9A169895453D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
