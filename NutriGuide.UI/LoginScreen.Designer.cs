@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            label6 = new Label();
-            label3 = new Label();
             pictureBox4 = new PictureBox();
             pictureBox5 = new PictureBox();
             txtPassword = new TextBox();
@@ -45,8 +43,10 @@
             panel2 = new Panel();
             label5 = new Label();
             pictureBox6 = new PictureBox();
-            label4 = new Label();
             label2 = new Label();
+            label3 = new Label();
+            label6 = new Label();
+            label4 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
@@ -75,22 +75,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(438, 457);
             panel1.TabIndex = 12;
-            // 
-            // label6
-            // 
-            label6.BackColor = Color.FromArgb(57, 91, 100);
-            label6.Location = new Point(436, -16);
-            label6.Name = "label6";
-            label6.Size = new Size(10, 473);
-            label6.TabIndex = 17;
-            // 
-            // label3
-            // 
-            label3.BackColor = Color.FromArgb(57, 91, 100);
-            label3.Location = new Point(440, -29);
-            label3.Name = "label3";
-            label3.Size = new Size(13, 539);
-            label3.TabIndex = 14;
             // 
             // pictureBox4
             // 
@@ -245,22 +229,14 @@
             // pictureBox6
             // 
             pictureBox6.BackColor = Color.Transparent;
-            pictureBox6.Image = Properties.Resources.close_1;
-            pictureBox6.Location = new Point(1041, -6);
+            pictureBox6.Image = Properties.Resources.close__2_;
+            pictureBox6.Location = new Point(1044, 2);
             pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(41, 39);
+            pictureBox6.Size = new Size(30, 31);
             pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox6.TabIndex = 15;
             pictureBox6.TabStop = false;
             pictureBox6.Click += pictureBox6_Click;
-            // 
-            // label4
-            // 
-            label4.BackColor = Color.FromArgb(57, 91, 100);
-            label4.Location = new Point(1075, 470);
-            label4.Name = "label4";
-            label4.Size = new Size(16, 42);
-            label4.TabIndex = 15;
             // 
             // label2
             // 
@@ -269,6 +245,30 @@
             label2.Name = "label2";
             label2.Size = new Size(15, 518);
             label2.TabIndex = 13;
+            // 
+            // label3
+            // 
+            label3.BackColor = Color.FromArgb(57, 91, 100);
+            label3.Location = new Point(440, -29);
+            label3.Name = "label3";
+            label3.Size = new Size(13, 539);
+            label3.TabIndex = 14;
+            // 
+            // label6
+            // 
+            label6.BackColor = Color.FromArgb(57, 91, 100);
+            label6.Location = new Point(436, -16);
+            label6.Name = "label6";
+            label6.Size = new Size(10, 473);
+            label6.TabIndex = 17;
+            // 
+            // label4
+            // 
+            label4.BackColor = Color.FromArgb(57, 91, 100);
+            label4.Location = new Point(1075, 470);
+            label4.Name = "label4";
+            label4.Size = new Size(16, 42);
+            label4.TabIndex = 15;
             // 
             // Form1
             // 
@@ -311,10 +311,10 @@
         private Panel panel1;
         private Panel panel2;
         private Label label2;
-        private Label label3;
         private PictureBox pictureBox6;
         private Label label5;
-        private Label label4;
         private Label label6;
+        private Label label3;
+        private Label label4;
     }
 }
