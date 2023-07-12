@@ -12,6 +12,7 @@ namespace NutriGuide.Entity.Data
         public int KullaniciId { get; set; }
         public string? Ad { get; set; }
         public string? Soyad { get; set; }
+        public string? Cinsiyet { get; set; }
         public DateTime DogumTarihi { get; set; }
         public int Kilosu { get; set; }
         public int Boyu { get; set; }
