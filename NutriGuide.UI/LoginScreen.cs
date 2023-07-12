@@ -7,17 +7,11 @@ namespace NutriGuide.UI
         public Form1()
         {
             InitializeComponent();
-
-
-
-
-
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Application.Exit();
-
         }
 
         private void lblSignUp_Click(object sender, EventArgs e)
@@ -52,10 +46,6 @@ namespace NutriGuide.UI
                 lblYazi.Text = "Don't have an account?";
                 lblSignUp.Text = "Sign Up!";
             }
-
-
-
-
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -73,7 +63,6 @@ namespace NutriGuide.UI
             // subsequent wait period
             if (btnLogin.Text == "LOGIN" && txtPassword.Text != "" && txtUsername.Text != "")
             {
-
                 MainMenu mainMenu = new MainMenu(txtPassword.Text, txtUsername.Text);
                 mainMenu.Show();
                 this.Hide();
@@ -82,11 +71,6 @@ namespace NutriGuide.UI
             {
                 // db ye kiþi eklenicek
             }
-
-
-
-
-
         }
 
         private void txtPassword_TextChanged(object sender, EventArgs e)
@@ -97,7 +81,6 @@ namespace NutriGuide.UI
         private void pictureBox6_Click(object sender, EventArgs e)
         {
             Application.Exit();
-
         }
     }
 }

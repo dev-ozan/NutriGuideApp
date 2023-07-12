@@ -37,11 +37,11 @@
             panel3 = new Panel();
             label2 = new Label();
             label1 = new Label();
-            panel4 = new Panel();
             panel5 = new Panel();
             panel1 = new Panel();
-            label3 = new Label();
             label4 = new Label();
+            label3 = new Label();
+            pnlChildForm = new Panel();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
             panel5.SuspendLayout();
@@ -70,7 +70,7 @@
             panel2.Controls.Add(button1);
             panel2.Controls.Add(button2);
             panel2.Controls.Add(button3);
-            panel2.Location = new Point(0, 85);
+            panel2.Location = new Point(0, 122);
             panel2.Margin = new Padding(4);
             panel2.Name = "panel2";
             panel2.Size = new Size(257, 229);
@@ -91,6 +91,7 @@
             button4.TabIndex = 3;
             button4.Text = "button4";
             button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
             // 
             // button1
             // 
@@ -107,6 +108,7 @@
             button1.TabIndex = 0;
             button1.Text = "button1";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -149,7 +151,7 @@
             panel3.Location = new Point(0, 114);
             panel3.Margin = new Padding(4);
             panel3.Name = "panel3";
-            panel3.Size = new Size(257, 303);
+            panel3.Size = new Size(257, 420);
             panel3.TabIndex = 2;
             // 
             // label2
@@ -173,15 +175,6 @@
             label1.TabIndex = 4;
             label1.Text = "Nutri Guide";
             label1.TextAlign = ContentAlignment.MiddleCenter;
-            label1.Click += label1_Click;
-            // 
-            // panel4
-            // 
-            panel4.Location = new Point(256, 114);
-            panel4.Margin = new Padding(4);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(673, 314);
-            panel4.TabIndex = 3;
             // 
             // panel5
             // 
@@ -192,7 +185,7 @@
             panel5.Location = new Point(0, 0);
             panel5.Margin = new Padding(4);
             panel5.Name = "panel5";
-            panel5.Size = new Size(958, 114);
+            panel5.Size = new Size(994, 114);
             panel5.TabIndex = 4;
             // 
             // panel1
@@ -204,15 +197,6 @@
             panel1.Size = new Size(198, 83);
             panel1.TabIndex = 5;
             // 
-            // label3
-            // 
-            label3.BackColor = Color.FromArgb(0, 173, 181);
-            label3.Location = new Point(3, 9);
-            label3.Name = "label3";
-            label3.Size = new Size(192, 28);
-            label3.TabIndex = 0;
-            label3.Text = "label3";
-            // 
             // label4
             // 
             label4.BackColor = Color.FromArgb(0, 173, 181);
@@ -222,14 +206,30 @@
             label4.TabIndex = 1;
             label4.Text = "label4";
             // 
+            // label3
+            // 
+            label3.BackColor = Color.FromArgb(0, 173, 181);
+            label3.Location = new Point(3, 9);
+            label3.Name = "label3";
+            label3.Size = new Size(192, 28);
+            label3.TabIndex = 0;
+            label3.Text = "label3";
+            // 
+            // pnlChildForm
+            // 
+            pnlChildForm.Location = new Point(258, 114);
+            pnlChildForm.Name = "pnlChildForm";
+            pnlChildForm.Size = new Size(736, 420);
+            pnlChildForm.TabIndex = 5;
+            // 
             // MainMenu
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(958, 426);
+            ClientSize = new Size(994, 531);
+            Controls.Add(pnlChildForm);
             Controls.Add(panel5);
             Controls.Add(panel3);
-            Controls.Add(panel4);
             Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             Margin = new Padding(4);
             Name = "MainMenu";
@@ -250,12 +250,12 @@
         private Button button2;
         private Button button1;
         private Panel panel3;
-        private Panel panel4;
         private Label label1;
         private Panel panel5;
         private Label label2;
         private Panel panel1;
         private Label label4;
         private Label label3;
+        private Panel pnlChildForm;
     }
 }
