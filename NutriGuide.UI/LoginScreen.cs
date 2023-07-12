@@ -7,7 +7,7 @@ namespace NutriGuide.UI
         public Form1()
         {
             InitializeComponent();
-            
+
 
 
 
@@ -22,16 +22,39 @@ namespace NutriGuide.UI
 
         private void lblSignUp_Click(object sender, EventArgs e)
         {
-            btnLogin.Text = "";
-            string text = "SIGN UP";
-            StringBuilder sb = new StringBuilder();
-            for (int i = 0; i < text.Length; i++)
+            if (lblSignUp.Text == "Sign Up!")
             {
-                Thread.Sleep(50);
-                sb.Append(text[i]);
-                btnLogin.Text = sb.ToString();
-                Refresh();
+
+                string text = "SIGN UP";
+                StringBuilder sb = new StringBuilder();
+                for (int i = 0; i < text.Length; i++)
+                {
+                    Thread.Sleep(50);
+                    sb.Append(text[i]);
+                    btnLogin.Text = sb.ToString();
+                    Refresh();
+                }
+                lblYazi.Text = "Already have an account?";
+                lblSignUp.Text = "Login";
             }
+            else if (lblSignUp.Text == "Login")
+            {
+                btnLogin.Text = "";
+                string text = "LOGIN";
+                StringBuilder sb = new StringBuilder();
+                for (int i = 0; i < text.Length; i++)
+                {
+                    Thread.Sleep(50);
+                    sb.Append(text[i]);
+                    btnLogin.Text = sb.ToString();
+                    Refresh();
+                }
+                lblYazi.Text = "Don't have an account?";
+                lblSignUp.Text = "Sign Up!";
+            }
+
+
+
 
         }
 
@@ -50,8 +73,8 @@ namespace NutriGuide.UI
             // subsequent wait period
             if (btnLogin.Text == "LOGIN" && txtPassword.Text != "" && txtUsername.Text != "")
             {
-                
-                MainMenu mainMenu = new MainMenu(txtPassword.Text,txtUsername.Text);
+
+                MainMenu mainMenu = new MainMenu(txtPassword.Text, txtUsername.Text);
                 mainMenu.Show();
                 this.Hide();
             }
