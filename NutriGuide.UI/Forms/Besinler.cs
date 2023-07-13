@@ -15,19 +15,69 @@ namespace NutriGuide.UI.Forms
     public partial class Besinler : Form
     {
         Kullanici _kisi;
-
+        NutriGuideContext _db = new NutriGuideContext();
         public Besinler(Kullanici kisi)
         {
             InitializeComponent();
-            dgvYemekler.ColumnCount = 1;
-            dgvYemekler.Columns[0].Name = "Column 1";
-            dgvYemekler.Rows.Add( "ad", "\t", "cins", "\t", "protein miktari", "\t", "karbonhidrat miktari", "\t", "Yag miktari", "\t", "Kalorisi", "\t");
             _kisi = kisi;
-            using (NutriGuideContext _db = new NutriGuideContext())
+
+
+            dgvYemekler.DataSource = _db.Foods.ToList();
+
+            cmbDiyetler.Items.Add("Diyet Secin");
+            cmbDiyetler.SelectedIndex = 0;
+            if (_kisi.Diyetler != null)
             {
-                dgvYemekler.DataSource = _db.Foods.ToList();
+                foreach (var item in _kisi.Diyetler)
+                {
+                    cmbDiyetler.Items.Add(item);
+                }
             }
 
+        }
+
+        private void btnEkle_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dgvYemekler.SelectedRows)
+            {
+                Food selectedFood = (Food)row.DataBoundItem;
+                _kisi.Foods.Add(selectedFood);
+                _db.Update(_kisi);
+                _db.SaveChanges();
+            }
+
+
+        }
+
+
+        private void dgvYemekler_SelectionChanged(object sender, EventArgs e)
+        {
+            double toplamKalori = 0;
+            double karbonhidrat = 0;
+            double protein = 0;
+            double yag = 0;
+            foreach (DataGridViewRow row in dgvYemekler.SelectedRows)
+            {
+                Food selectedFood = (Food)row.DataBoundItem;
+                toplamKalori += selectedFood.Kalorisi;
+                karbonhidrat += selectedFood.KarbonhidratMiktari;
+                protein += selectedFood.ProteinMiktari;
+                yag += selectedFood.YagMiktari;
+            }
+            lblToplamKalori.Text = toplamKalori.ToString();
+            lblKarbonhidrat.Text = string.Format("{0:0.##}", karbonhidrat);
+            lblProtein.Text = string.Format("{0:0.##}", protein);
+            lblYag.Text = string.Format("{0:0.##}", yag);
+        }
+
+        private void btnCikar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbDiyetler_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dgvYemekler.DataSource = cmbDiyetler.SelectedItem;
         }
     }
 }

@@ -48,7 +48,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(23, 88);
+            label1.Location = new Point(23, 36);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
             label1.Size = new Size(66, 20);
@@ -59,15 +59,16 @@
             // 
             cmbDiyetler.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbDiyetler.FormattingEnabled = true;
-            cmbDiyetler.Location = new Point(90, 85);
+            cmbDiyetler.Location = new Point(90, 33);
             cmbDiyetler.Name = "cmbDiyetler";
             cmbDiyetler.Size = new Size(197, 28);
             cmbDiyetler.TabIndex = 1;
+            cmbDiyetler.SelectedIndexChanged += cmbDiyetler_SelectedIndexChanged;
             // 
             // lblToplamKalori
             // 
             lblToplamKalori.AutoSize = true;
-            lblToplamKalori.Location = new Point(155, 149);
+            lblToplamKalori.Location = new Point(155, 97);
             lblToplamKalori.Margin = new Padding(4, 0, 4, 0);
             lblToplamKalori.Name = "lblToplamKalori";
             lblToplamKalori.Size = new Size(51, 20);
@@ -76,26 +77,28 @@
             // 
             // btnEkle
             // 
-            btnEkle.Location = new Point(463, 281);
+            btnEkle.Location = new Point(423, 142);
             btnEkle.Name = "btnEkle";
-            btnEkle.Size = new Size(95, 35);
+            btnEkle.Size = new Size(106, 35);
             btnEkle.TabIndex = 5;
             btnEkle.Text = "Yemek Ekle";
             btnEkle.UseVisualStyleBackColor = true;
+            btnEkle.Click += btnEkle_Click;
             // 
             // btnCikar
             // 
-            btnCikar.Location = new Point(575, 281);
+            btnCikar.Location = new Point(572, 142);
             btnCikar.Name = "btnCikar";
-            btnCikar.Size = new Size(95, 35);
+            btnCikar.Size = new Size(108, 35);
             btnCikar.TabIndex = 6;
             btnCikar.Text = "Yemek Çıkar";
             btnCikar.UseVisualStyleBackColor = true;
+            btnCikar.Click += btnCikar_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(23, 147);
+            label2.Location = new Point(23, 95);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
             label2.Size = new Size(108, 20);
@@ -105,7 +108,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(23, 194);
+            label3.Location = new Point(23, 142);
             label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
             label3.Size = new Size(112, 20);
@@ -115,7 +118,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(166, 194);
+            label5.Location = new Point(155, 142);
             label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
             label5.Size = new Size(100, 20);
@@ -125,7 +128,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(278, 194);
+            label6.Location = new Point(263, 142);
             label6.Margin = new Padding(4, 0, 4, 0);
             label6.Name = "label6";
             label6.Size = new Size(38, 20);
@@ -135,7 +138,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(349, 194);
+            label7.Location = new Point(329, 142);
             label7.Margin = new Padding(4, 0, 4, 0);
             label7.Name = "label7";
             label7.Size = new Size(59, 20);
@@ -145,7 +148,7 @@
             // lblProtein
             // 
             lblProtein.AutoSize = true;
-            lblProtein.Location = new Point(349, 229);
+            lblProtein.Location = new Point(329, 177);
             lblProtein.Margin = new Padding(4, 0, 4, 0);
             lblProtein.Name = "lblProtein";
             lblProtein.Size = new Size(39, 20);
@@ -155,7 +158,7 @@
             // lblYag
             // 
             lblYag.AutoSize = true;
-            lblYag.Location = new Point(278, 229);
+            lblYag.Location = new Point(263, 177);
             lblYag.Margin = new Padding(4, 0, 4, 0);
             lblYag.Name = "lblYag";
             lblYag.Size = new Size(39, 20);
@@ -165,7 +168,7 @@
             // lblKarbonhidrat
             // 
             lblKarbonhidrat.AutoSize = true;
-            lblKarbonhidrat.Location = new Point(166, 229);
+            lblKarbonhidrat.Location = new Point(155, 177);
             lblKarbonhidrat.Margin = new Padding(4, 0, 4, 0);
             lblKarbonhidrat.Name = "lblKarbonhidrat";
             lblKarbonhidrat.Size = new Size(39, 20);
@@ -174,12 +177,21 @@
             // 
             // dgvYemekler
             // 
+            dgvYemekler.AllowUserToAddRows = false;
+            dgvYemekler.AllowUserToDeleteRows = false;
+            dgvYemekler.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvYemekler.CellBorderStyle = DataGridViewCellBorderStyle.SingleVertical;
             dgvYemekler.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvYemekler.Location = new Point(463, 36);
+            dgvYemekler.Dock = DockStyle.Bottom;
+            dgvYemekler.Location = new Point(0, 203);
             dgvYemekler.Name = "dgvYemekler";
+            dgvYemekler.ReadOnly = true;
+            dgvYemekler.RowHeadersVisible = false;
             dgvYemekler.RowTemplate.Height = 25;
-            dgvYemekler.Size = new Size(220, 213);
+            dgvYemekler.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvYemekler.Size = new Size(721, 178);
             dgvYemekler.TabIndex = 15;
+            dgvYemekler.SelectionChanged += dgvYemekler_SelectionChanged;
             // 
             // Besinler
             // 

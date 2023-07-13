@@ -12,6 +12,7 @@ namespace NutriGuide.DataAccessLayer.Concrets
     {
         public DbSet<Food> Foods { get; set; }
         public DbSet<Kullanici> Kullanicilar { get; set; }
+        public DbSet<Diyetler> Diyetler { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("server=(LocalDB)\\MSSQLLocalDB;database=NutriGuideDb");
