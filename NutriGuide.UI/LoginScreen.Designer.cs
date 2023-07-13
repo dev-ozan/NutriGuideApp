@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            label6 = new Label();
+            label3 = new Label();
             pictureBox4 = new PictureBox();
             pictureBox5 = new PictureBox();
             txtPassword = new TextBox();
@@ -43,10 +45,8 @@
             panel2 = new Panel();
             label5 = new Label();
             pictureBox6 = new PictureBox();
-            label2 = new Label();
-            label3 = new Label();
-            label6 = new Label();
             label4 = new Label();
+            label2 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
@@ -75,6 +75,22 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(438, 457);
             panel1.TabIndex = 12;
+            // 
+            // label6
+            // 
+            label6.BackColor = Color.FromArgb(57, 91, 100);
+            label6.Location = new Point(436, -16);
+            label6.Name = "label6";
+            label6.Size = new Size(10, 473);
+            label6.TabIndex = 17;
+            // 
+            // label3
+            // 
+            label3.BackColor = Color.FromArgb(57, 91, 100);
+            label3.Location = new Point(440, -29);
+            label3.Name = "label3";
+            label3.Size = new Size(13, 539);
+            label3.TabIndex = 14;
             // 
             // pictureBox4
             // 
@@ -108,7 +124,6 @@
             txtPassword.PasswordChar = '*';
             txtPassword.Size = new Size(384, 28);
             txtPassword.TabIndex = 8;
-            txtPassword.TextChanged += txtPassword_TextChanged;
             // 
             // pictureBox2
             // 
@@ -238,30 +253,6 @@
             pictureBox6.TabStop = false;
             pictureBox6.Click += pictureBox6_Click;
             // 
-            // label2
-            // 
-            label2.BackColor = Color.FromArgb(57, 91, 100);
-            label2.Location = new Point(605, -3);
-            label2.Name = "label2";
-            label2.Size = new Size(15, 518);
-            label2.TabIndex = 13;
-            // 
-            // label3
-            // 
-            label3.BackColor = Color.FromArgb(57, 91, 100);
-            label3.Location = new Point(440, -29);
-            label3.Name = "label3";
-            label3.Size = new Size(13, 539);
-            label3.TabIndex = 14;
-            // 
-            // label6
-            // 
-            label6.BackColor = Color.FromArgb(57, 91, 100);
-            label6.Location = new Point(436, -16);
-            label6.Name = "label6";
-            label6.Size = new Size(10, 473);
-            label6.TabIndex = 17;
-            // 
             // label4
             // 
             label4.BackColor = Color.FromArgb(57, 91, 100);
@@ -269,6 +260,14 @@
             label4.Name = "label4";
             label4.Size = new Size(16, 42);
             label4.TabIndex = 15;
+            // 
+            // label2
+            // 
+            label2.BackColor = Color.FromArgb(57, 91, 100);
+            label2.Location = new Point(605, -3);
+            label2.Name = "label2";
+            label2.Size = new Size(15, 518);
+            label2.TabIndex = 13;
             // 
             // Form1
             // 

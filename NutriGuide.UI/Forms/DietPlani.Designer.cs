@@ -133,6 +133,7 @@
             // 
             AutoScaleDimensions = new SizeF(9F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(248, 253, 207);
             ClientSize = new Size(720, 381);
             Controls.Add(label3);
             Controls.Add(cmbDiyetler);

@@ -48,27 +48,32 @@ namespace NutriGuide.UI
         {
 
             OpenChildForm(new Forms.AnaMenu(lblKullaniciAd.Text));
-               
+            this.BackColor = Color.FromArgb(219, 226, 239);
+
         }
 
         private void btnProfile_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.Profile(lblKullaniciAd.Text));
+            this.BackColor = Color.FromArgb(231, 206, 166);
         }
 
         private void btnDiyetPlan_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.DietPlani());
+            this.BackColor = Color.FromArgb(248, 253, 207);
         }
 
         private void btnYemekler_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.Besinler());
+            this.BackColor = Color.FromArgb(160, 191, 224);
         }
 
         private void btnInfo_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.Infos());
+            this.BackColor = Color.FromArgb(192, 219, 234);
         }
 
         private void timer1_Tick(object sender, EventArgs e)

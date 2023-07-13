@@ -7,9 +7,7 @@ using System.Text;
 namespace NutriGuide.UI
 {
     public partial class Form1 : Form
-
     {
-        
         public Form1()
         {
             InitializeComponent();
@@ -24,19 +22,17 @@ namespace NutriGuide.UI
         {
             if (lblSignUp.Text == "Sign Up!")
             {
-
                 string text = "SIGN UP";
                 StringBuilder sb = new StringBuilder();
                 for (int i = 0; i < text.Length; i++)
                 {
-                    Thread.Sleep(50);
+                    Thread.Sleep(20);
                     sb.Append(text[i]);
                     btnLogin.Text = sb.ToString();
                     Refresh();
                 }
                 lblYazi.Text = "Already have an account?";
                 lblSignUp.Text = "Login";
-
             }
             else if (lblSignUp.Text == "Login")
             {
@@ -45,7 +41,7 @@ namespace NutriGuide.UI
                 StringBuilder sb = new StringBuilder();
                 for (int i = 0; i < text.Length; i++)
                 {
-                    Thread.Sleep(50);
+                    Thread.Sleep(20);
                     sb.Append(text[i]);
                     btnLogin.Text = sb.ToString();
                     Refresh();
@@ -72,12 +68,9 @@ namespace NutriGuide.UI
                 string Pwd = txtPassword.Text;
                 string hashedPwd = PasswordHasher.HashPassword(Pwd);
                 var kisi = _Db.Kullanicilar.FirstOrDefault(x => x.KullaniciAdi == txtUsername.Text);
-                if (btnLogin.Text == "LOGIN"  && _Db.Kullanicilar.Contains(kisi) && kisi.KullaniciPassword == hashedPwd && txtUsername.Text == kisi.KullaniciAdi)
+                if (btnLogin.Text == "LOGIN" && _Db.Kullanicilar.Contains(kisi) && kisi.KullaniciPassword == hashedPwd && txtUsername.Text == kisi.KullaniciAdi)
                 {
                     MessageBox.Show("Giriþ Baþarýlý");
-                    
-
-
                     MainMenu mainMenu = new MainMenu(txtUsername.Text);
                     mainMenu.Show();
                     this.Hide();
@@ -87,25 +80,16 @@ namespace NutriGuide.UI
                     MessageBox.Show("Baþarýyla Üye oldunuz.");
                     using (NutriGuideContext _db = new NutriGuideContext())
                     {
-                        
                         Kullanici k1 = new Kullanici();
                         k1.KullaniciAdi = txtUsername.Text;
                         k1.KullaniciPassword = hashedPwd; // Hashlenmiþ þifre kullanýcý nesnesine atanýyor
                         _db.Kullanicilar.Add(k1);
                         _db.SaveChanges();
-
-
                     }
                 }
                 else
                     MessageBox.Show("Giriþ baþarýþýz.");
             }
-            
-        }
-
-        private void txtPassword_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)

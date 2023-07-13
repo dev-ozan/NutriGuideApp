@@ -320,6 +320,7 @@
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(192, 219, 234);
             ClientSize = new Size(994, 531);
             Controls.Add(pnlChildForm);
             Controls.Add(panel5);

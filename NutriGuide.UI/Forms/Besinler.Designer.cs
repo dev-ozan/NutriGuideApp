@@ -183,6 +183,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(160, 191, 224);
             ClientSize = new Size(721, 381);
             Controls.Add(lstYemekler);
             Controls.Add(lblProtein);

@@ -214,7 +214,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(238, 238, 238);
+            BackColor = Color.FromArgb(231, 206, 166);
             ClientSize = new Size(823, 432);
             Controls.Add(btnGuncelle);
             Controls.Add(cmbCinsiyet);
