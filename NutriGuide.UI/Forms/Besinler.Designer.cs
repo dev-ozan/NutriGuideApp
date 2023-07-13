@@ -41,7 +41,8 @@
             lblProtein = new Label();
             lblYag = new Label();
             lblKarbonhidrat = new Label();
-            lstYemekler = new ListBox();
+            dgvYemekler = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dgvYemekler).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -50,7 +51,7 @@
             label1.Location = new Point(23, 88);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(58, 20);
+            label1.Size = new Size(66, 20);
             label1.TabIndex = 0;
             label1.Text = "Diyetler:";
             // 
@@ -69,7 +70,7 @@
             lblToplamKalori.Location = new Point(155, 149);
             lblToplamKalori.Margin = new Padding(4, 0, 4, 0);
             lblToplamKalori.Name = "lblToplamKalori";
-            lblToplamKalori.Size = new Size(45, 20);
+            lblToplamKalori.Size = new Size(51, 20);
             lblToplamKalori.TabIndex = 4;
             lblToplamKalori.Text = "label4";
             // 
@@ -97,7 +98,7 @@
             label2.Location = new Point(23, 147);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(95, 20);
+            label2.Size = new Size(108, 20);
             label2.TabIndex = 7;
             label2.Text = "Toplam Kalori:";
             // 
@@ -107,7 +108,7 @@
             label3.Location = new Point(23, 194);
             label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new Size(96, 20);
+            label3.Size = new Size(112, 20);
             label3.TabIndex = 8;
             label3.Text = "Alacağı Miktar:";
             // 
@@ -117,7 +118,7 @@
             label5.Location = new Point(166, 194);
             label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
-            label5.Size = new Size(84, 20);
+            label5.Size = new Size(100, 20);
             label5.TabIndex = 9;
             label5.Text = "Karbonhidrat";
             // 
@@ -127,7 +128,7 @@
             label6.Location = new Point(278, 194);
             label6.Margin = new Padding(4, 0, 4, 0);
             label6.Name = "label6";
-            label6.Size = new Size(33, 20);
+            label6.Size = new Size(38, 20);
             label6.TabIndex = 10;
             label6.Text = "Yağ";
             // 
@@ -137,7 +138,7 @@
             label7.Location = new Point(349, 194);
             label7.Margin = new Padding(4, 0, 4, 0);
             label7.Name = "label7";
-            label7.Size = new Size(51, 20);
+            label7.Size = new Size(59, 20);
             label7.TabIndex = 11;
             label7.Text = "Protein";
             // 
@@ -147,7 +148,7 @@
             lblProtein.Location = new Point(349, 229);
             lblProtein.Margin = new Padding(4, 0, 4, 0);
             lblProtein.Name = "lblProtein";
-            lblProtein.Size = new Size(34, 20);
+            lblProtein.Size = new Size(39, 20);
             lblProtein.TabIndex = 14;
             lblProtein.Text = "*****";
             // 
@@ -157,7 +158,7 @@
             lblYag.Location = new Point(278, 229);
             lblYag.Margin = new Padding(4, 0, 4, 0);
             lblYag.Name = "lblYag";
-            lblYag.Size = new Size(34, 20);
+            lblYag.Size = new Size(39, 20);
             lblYag.TabIndex = 13;
             lblYag.Text = "*****";
             // 
@@ -167,26 +168,26 @@
             lblKarbonhidrat.Location = new Point(166, 229);
             lblKarbonhidrat.Margin = new Padding(4, 0, 4, 0);
             lblKarbonhidrat.Name = "lblKarbonhidrat";
-            lblKarbonhidrat.Size = new Size(34, 20);
+            lblKarbonhidrat.Size = new Size(39, 20);
             lblKarbonhidrat.TabIndex = 12;
             lblKarbonhidrat.Text = "*****";
             // 
-            // lstYemekler
+            // dgvYemekler
             // 
-            lstYemekler.FormattingEnabled = true;
-            lstYemekler.ItemHeight = 20;
-            lstYemekler.Location = new Point(463, 25);
-            lstYemekler.Name = "lstYemekler";
-            lstYemekler.Size = new Size(207, 224);
-            lstYemekler.TabIndex = 15;
+            dgvYemekler.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvYemekler.Location = new Point(463, 36);
+            dgvYemekler.Name = "dgvYemekler";
+            dgvYemekler.RowTemplate.Height = 25;
+            dgvYemekler.Size = new Size(220, 213);
+            dgvYemekler.TabIndex = 15;
             // 
             // Besinler
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(160, 191, 224);
             ClientSize = new Size(721, 381);
-            Controls.Add(lstYemekler);
+            Controls.Add(dgvYemekler);
             Controls.Add(lblProtein);
             Controls.Add(lblYag);
             Controls.Add(lblKarbonhidrat);
@@ -200,10 +201,11 @@
             Controls.Add(lblToplamKalori);
             Controls.Add(cmbDiyetler);
             Controls.Add(label1);
-            Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             Margin = new Padding(4);
             Name = "Besinler";
             Text = "Besinler";
+            ((System.ComponentModel.ISupportInitialize)dgvYemekler).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -223,6 +225,6 @@
         private Label lblProtein;
         private Label lblYag;
         private Label lblKarbonhidrat;
-        private ListBox lstYemekler;
+        private DataGridView dgvYemekler;
     }
 }
