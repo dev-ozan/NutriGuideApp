@@ -14,12 +14,14 @@ namespace NutriGuide.UI.Forms
 {
     public partial class AnaMenu : Form
     {
-        public AnaMenu(string a)
+        Kullanici _kisi;
+        public AnaMenu(Kullanici kisi)
         {
+            
             InitializeComponent();
             using (NutriGuideContext _db = new NutriGuideContext())
             {
-                var kisi = _db.Kullanicilar.FirstOrDefault(b => b.KullaniciAdi == a.ToString());
+                _kisi = kisi;
                 lblKullaniciAd.Text = kisi.KullaniciAdi.ToString();
                 lblAdSoyad.Text = kisi.Ad + " " + kisi.Soyad;
                 if (kisi.Cinsiyet == "Erkek")

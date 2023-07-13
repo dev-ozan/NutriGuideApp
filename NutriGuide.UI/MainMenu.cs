@@ -15,10 +15,13 @@ namespace NutriGuide.UI
     {
         bool panelGizlimi = false;
         Form activeForm;
-        public MainMenu(string a)
+        Kullanici _kisi;
+        
+        public MainMenu(Kullanici kisi)
         {
             InitializeComponent();
-            lblKullaniciAd.Text = a.ToString();
+            _kisi = kisi;
+            lblKullaniciAd.Text = _kisi.KullaniciAdi.ToString();
             lblSaat.Text = DateTime.Now.ToString();
             timer1.Start();
         }
@@ -45,25 +48,25 @@ namespace NutriGuide.UI
 
         private void btnAnaMenu_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.AnaMenu(lblKullaniciAd.Text));
+            OpenChildForm(new Forms.AnaMenu(_kisi));
             this.BackColor = Color.FromArgb(219, 226, 239);
         }
 
         private void btnProfile_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.Profile(lblKullaniciAd.Text));
+            OpenChildForm(new Forms.Profile(_kisi));
             this.BackColor = Color.FromArgb(231, 206, 166);
         }
 
         private void btnDiyetPlan_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.DietPlani(lblKullaniciAd.Text));
+            OpenChildForm(new Forms.DietPlani(_kisi));
             this.BackColor = Color.FromArgb(248, 253, 207);
         }
 
         private void btnYemekler_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.Besinler(lblKullaniciAd.Text));
+            OpenChildForm(new Forms.Besinler(_kisi));
             this.BackColor = Color.FromArgb(160, 191, 224);
         }
 

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using NutriGuide.DataAccessLayer.Concrets;
+using NutriGuide.Entity.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,11 +14,16 @@ namespace NutriGuide.UI.Forms
 {
     public partial class Besinler : Form
     {
-        string _a;
-        public Besinler(string a)
+        Kullanici _kisi;
+        public Besinler(Kullanici kisi)
         {
             InitializeComponent();
-            _a = a;
+            _kisi = kisi;
+            using(NutriGuideContext _db = new NutriGuideContext())
+            {
+
+            }
+            
         }
     }
 }

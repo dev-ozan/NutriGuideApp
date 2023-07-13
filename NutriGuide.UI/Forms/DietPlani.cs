@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NutriGuide.Entity.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,11 +13,12 @@ namespace NutriGuide.UI.Forms
 {
     public partial class DietPlani : Form
     {
-        string _a;
-        public DietPlani(string a)
+        Kullanici _kisi;
+        public DietPlani(Kullanici kisi)
         {
             InitializeComponent();
-            _a = a;
+            _kisi = kisi;
+            
             dtpBaslama.MinDate = DateTime.Now;          
         }
 

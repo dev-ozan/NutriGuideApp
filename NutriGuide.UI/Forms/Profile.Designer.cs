@@ -169,6 +169,7 @@
             dtpDogumTarih.Name = "dtpDogumTarih";
             dtpDogumTarih.Size = new Size(182, 25);
             dtpDogumTarih.TabIndex = 12;
+            dtpDogumTarih.Value = new DateTime(2005, 1, 1, 0, 0, 0, 0);
             // 
             // lblKullaniciAd
             // 
