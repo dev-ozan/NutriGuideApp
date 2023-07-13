@@ -35,6 +35,7 @@ namespace NutriGuide.UI.Forms
             cmbDiyetler.Items.Clear();
             Diyetler diyet = new Diyetler();
             diyet.DiyetAdi = txtDiyetIsmi.Text;
+            diyet.KullaniciId = _kisi.KullaniciId;
             _kisi.Diyetler.Add(diyet);
             db.Kullanicilar.Update(_kisi);
             db.SaveChanges();
@@ -43,12 +44,11 @@ namespace NutriGuide.UI.Forms
         }
         public void Dongu()
         {
-            foreach (var item in _kisi.Diyetler)
+            foreach (var item in db.Diyetler.Where(x => x.KullaniciId == _kisi.KullaniciId).ToList())
             {
-                
-                cmbDiyetler.DataSource = _kisi.Diyetler.ToList();
-                cmbDiyetler.DisplayMember = "DiyetAdi";
+                cmbDiyetler.Items.Add(item.DiyetAdi);
             }
+            
         }
         
     }

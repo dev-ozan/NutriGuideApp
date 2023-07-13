@@ -10,6 +10,7 @@ namespace NutriGuide.Entity.Data
     {
         public int Id { get; set; }
         public string? DiyetAdi { get; set; }
+        public int KullaniciId { get; set; }
         public List<Kullanici> Kullanicilar { get; set; } = new();
         public List<Food> Yemekler { get; set; } = new();
 
