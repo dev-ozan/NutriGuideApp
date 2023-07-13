@@ -70,8 +70,7 @@ namespace NutriGuide.UI
                 var kisi = _Db.Kullanicilar.FirstOrDefault(x => x.KullaniciAdi == txtUsername.Text && PasswordHasher.HashPassword(txtPassword.Text)==x.KullaniciPassword);
                 if (btnLogin.Text == "LOGIN" && _Db.Kullanicilar.Contains(kisi) && kisi.KullaniciPassword == hashedPwd && txtUsername.Text == kisi.KullaniciAdi)
                 {
-                    MessageBox.Show("Giriþ Baþarýlý");
-                    MessageBox.Show(kisi.KullaniciPassword);
+                    MessageBox.Show("Giriþ Baþarýlý");                    
                     MainMenu mainMenu = new MainMenu(txtUsername.Text);
                     mainMenu.Show();
                     this.Hide();
