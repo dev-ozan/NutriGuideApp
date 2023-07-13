@@ -67,14 +67,16 @@ namespace NutriGuide.UI
             {
                 string Pwd = txtPassword.Text;
                 string hashedPwd = PasswordHasher.HashPassword(Pwd);
-                var kisi = _Db.Kullanicilar.FirstOrDefault(x => x.KullaniciAdi == txtUsername.Text);
+                var kisi = _Db.Kullanicilar.FirstOrDefault(x => x.KullaniciAdi == txtUsername.Text && PasswordHasher.HashPassword(txtPassword.Text)==x.KullaniciPassword);
                 if (btnLogin.Text == "LOGIN" && _Db.Kullanicilar.Contains(kisi) && kisi.KullaniciPassword == hashedPwd && txtUsername.Text == kisi.KullaniciAdi)
                 {
                     MessageBox.Show("Giriþ Baþarýlý");
+                    MessageBox.Show(kisi.KullaniciPassword);
                     MainMenu mainMenu = new MainMenu(txtUsername.Text);
                     mainMenu.Show();
                     this.Hide();
                 }
+
                 else if (lblSignUp.Text == "Login")
                 {
                     MessageBox.Show("Baþarýyla Üye oldunuz.");
@@ -85,6 +87,22 @@ namespace NutriGuide.UI
                         k1.KullaniciPassword = hashedPwd; // Hashlenmiþ þifre kullanýcý nesnesine atanýyor
                         _db.Kullanicilar.Add(k1);
                         _db.SaveChanges();
+                    }
+                    
+                    lblYazi.Text = "Don't have an account?";
+                    lblSignUp.Text = "Sign Up!";
+                }
+                else if (lblSignUp.Text == "Sign Up!")
+                {
+                    btnLogin.Text = "";
+                    string text1 = "LOGIN";
+                    StringBuilder sb1 = new StringBuilder();
+                    for (int i = 0; i < text1.Length; i++)
+                    {
+                        Thread.Sleep(20);
+                        sb.Append(text[i]);
+                        btnLogin.Text = sb1.ToString();
+                        Refresh();
                     }
                 }
                 else
