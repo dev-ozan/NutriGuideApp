@@ -20,8 +20,7 @@ namespace NutriGuide.UI.Forms
         {
             InitializeComponent();
             _kisi = kisi;
-            Dongu();
-            
+            Dongu();            
             dtpBaslama.MinDate = DateTime.Now;
         }
 
