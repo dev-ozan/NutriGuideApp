@@ -26,5 +26,10 @@ namespace NutriGuide.UI.Forms
         {
             dtpBitis.MinDate = dtpBaslama.Value;
         }
+
+        private void btnEkle_Click(object sender, EventArgs e)
+        {
+            _kisi.Diyetler.
+        }
     }
 }

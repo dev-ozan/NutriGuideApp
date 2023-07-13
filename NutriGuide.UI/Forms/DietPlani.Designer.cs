@@ -87,6 +87,7 @@
             btnEkle.TabIndex = 4;
             btnEkle.Text = "EKLE";
             btnEkle.UseVisualStyleBackColor = true;
+            btnEkle.Click += btnEkle_Click;
             // 
             // btnSil
             // 
