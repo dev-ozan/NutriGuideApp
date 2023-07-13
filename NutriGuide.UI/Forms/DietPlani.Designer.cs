@@ -66,6 +66,7 @@
             dtpBaslama.Name = "dtpBaslama";
             dtpBaslama.Size = new Size(147, 26);
             dtpBaslama.TabIndex = 2;
+            dtpBaslama.ValueChanged += dtpBaslama_ValueChanged;
             // 
             // dtpBitis
             // 
@@ -114,6 +115,7 @@
             // 
             // cmbDiyetler
             // 
+            cmbDiyetler.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbDiyetler.FormattingEnabled = true;
             cmbDiyetler.Location = new Point(102, 43);
             cmbDiyetler.Name = "cmbDiyetler";

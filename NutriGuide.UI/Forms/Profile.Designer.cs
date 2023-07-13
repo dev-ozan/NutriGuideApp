@@ -111,11 +111,11 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.Location = new Point(35, 71);
+            label8.Location = new Point(36, 71);
             label8.Name = "label8";
-            label8.Size = new Size(87, 18);
+            label8.Size = new Size(94, 18);
             label8.TabIndex = 6;
-            label8.Text = "Kullanıcı ID:";
+            label8.Text = "Kullanıcı Adı:";
             // 
             // txtAd
             // 
@@ -206,7 +206,7 @@
             btnGuncelle.Name = "btnGuncelle";
             btnGuncelle.Size = new Size(182, 39);
             btnGuncelle.TabIndex = 16;
-            btnGuncelle.Text = "EKLE";
+            btnGuncelle.Text = "Bilgileri Güncelle";
             btnGuncelle.UseVisualStyleBackColor = true;
             btnGuncelle.Click += btnGuncelle_Click;
             // 

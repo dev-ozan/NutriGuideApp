@@ -36,7 +36,6 @@ namespace NutriGuide.UI
             this.pnlChildForm.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
-
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -46,10 +45,8 @@ namespace NutriGuide.UI
 
         private void btnAnaMenu_Click(object sender, EventArgs e)
         {
-
             OpenChildForm(new Forms.AnaMenu(lblKullaniciAd.Text));
             this.BackColor = Color.FromArgb(219, 226, 239);
-
         }
 
         private void btnProfile_Click(object sender, EventArgs e)
@@ -60,13 +57,13 @@ namespace NutriGuide.UI
 
         private void btnDiyetPlan_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.DietPlani());
+            OpenChildForm(new Forms.DietPlani(lblKullaniciAd.Text));
             this.BackColor = Color.FromArgb(248, 253, 207);
         }
 
         private void btnYemekler_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.Besinler());
+            OpenChildForm(new Forms.Besinler(lblKullaniciAd.Text));
             this.BackColor = Color.FromArgb(160, 191, 224);
         }
 

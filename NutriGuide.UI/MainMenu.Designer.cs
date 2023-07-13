@@ -245,7 +245,7 @@
             // pictureBox3
             // 
             pictureBox3.Image = Properties.Resources.close__2_;
-            pictureBox3.Location = new Point(965, 0);
+            pictureBox3.Location = new Point(964, 1);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(29, 26);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
@@ -329,6 +329,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(4);
             Name = "MainMenu";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "MainMenu";
             panel2.ResumeLayout(false);
             panel3.ResumeLayout(false);

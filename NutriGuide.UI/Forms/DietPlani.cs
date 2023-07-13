@@ -12,9 +12,17 @@ namespace NutriGuide.UI.Forms
 {
     public partial class DietPlani : Form
     {
-        public DietPlani()
+        string _a;
+        public DietPlani(string a)
         {
             InitializeComponent();
+            _a = a;
+            dtpBaslama.MinDate = DateTime.Now;          
+        }
+
+        private void dtpBaslama_ValueChanged(object sender, EventArgs e)
+        {
+            dtpBitis.MinDate = dtpBaslama.Value;
         }
     }
 }

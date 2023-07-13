@@ -45,7 +45,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(177, 53);
+            label1.Location = new Point(173, 42);
             label1.Name = "label1";
             label1.Size = new Size(94, 18);
             label1.TabIndex = 0;
@@ -55,7 +55,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(184, 91);
+            label2.Location = new Point(180, 80);
             label2.Name = "label2";
             label2.Size = new Size(87, 18);
             label2.TabIndex = 1;
@@ -64,7 +64,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.userDefault;
-            pictureBox1.Location = new Point(36, 35);
+            pictureBox1.Location = new Point(28, 22);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(92, 89);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -74,7 +74,7 @@
             // lblKalori
             // 
             lblKalori.AutoSize = true;
-            lblKalori.Location = new Point(64, 162);
+            lblKalori.Location = new Point(56, 188);
             lblKalori.Name = "lblKalori";
             lblKalori.Size = new Size(37, 15);
             lblKalori.TabIndex = 3;
@@ -84,7 +84,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(174, 162);
+            label4.Location = new Point(167, 165);
             label4.Name = "label4";
             label4.Size = new Size(91, 18);
             label4.TabIndex = 4;
@@ -93,7 +93,7 @@
             // pictureBox2
             // 
             pictureBox2.Image = Properties.Resources.calories;
-            pictureBox2.Location = new Point(36, 180);
+            pictureBox2.Location = new Point(28, 206);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(92, 68);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
@@ -105,16 +105,16 @@
             lstTuketilenler.BackColor = SystemColors.Menu;
             lstTuketilenler.FormattingEnabled = true;
             lstTuketilenler.ItemHeight = 15;
-            lstTuketilenler.Location = new Point(271, 162);
+            lstTuketilenler.Location = new Point(264, 165);
             lstTuketilenler.Name = "lstTuketilenler";
-            lstTuketilenler.Size = new Size(162, 109);
+            lstTuketilenler.Size = new Size(220, 109);
             lstTuketilenler.TabIndex = 6;
             // 
             // lblAdSoyad
             // 
             lblAdSoyad.AutoSize = true;
             lblAdSoyad.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
-            lblAdSoyad.Location = new Point(266, 91);
+            lblAdSoyad.Location = new Point(262, 80);
             lblAdSoyad.Name = "lblAdSoyad";
             lblAdSoyad.Size = new Size(58, 20);
             lblAdSoyad.TabIndex = 8;
@@ -124,7 +124,7 @@
             // 
             lblKullaniciAd.AutoSize = true;
             lblKullaniciAd.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
-            lblKullaniciAd.Location = new Point(268, 53);
+            lblKullaniciAd.Location = new Point(264, 42);
             lblKullaniciAd.Name = "lblKullaniciAd";
             lblKullaniciAd.Size = new Size(58, 20);
             lblKullaniciAd.TabIndex = 7;
@@ -135,7 +135,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(219, 226, 239);
-            ClientSize = new Size(525, 348);
+            ClientSize = new Size(566, 334);
             Controls.Add(lblAdSoyad);
             Controls.Add(lblKullaniciAd);
             Controls.Add(lstTuketilenler);
@@ -145,6 +145,7 @@
             Controls.Add(pictureBox1);
             Controls.Add(label2);
             Controls.Add(label1);
+            MaximumSize = new Size(737, 420);
             Name = "AnaMenu";
             Text = "AnaMenu";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

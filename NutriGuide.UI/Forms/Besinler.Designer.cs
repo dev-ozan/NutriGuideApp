@@ -56,6 +56,7 @@
             // 
             // cmbDiyetler
             // 
+            cmbDiyetler.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbDiyetler.FormattingEnabled = true;
             cmbDiyetler.Location = new Point(90, 85);
             cmbDiyetler.Name = "cmbDiyetler";

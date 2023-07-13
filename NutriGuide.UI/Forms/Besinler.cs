@@ -12,9 +12,11 @@ namespace NutriGuide.UI.Forms
 {
     public partial class Besinler : Form
     {
-        public Besinler()
+        string _a;
+        public Besinler(string a)
         {
             InitializeComponent();
+            _a = a;
         }
     }
 }
