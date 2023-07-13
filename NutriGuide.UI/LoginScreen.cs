@@ -1,3 +1,4 @@
+using NutriGuide.Entity.Data;
 using System.Text;
 
 namespace NutriGuide.UI
@@ -60,16 +61,21 @@ namespace NutriGuide.UI
                 btnLogin.Text = sb.ToString();
                 Refresh();
             }
-            // subsequent wait period
+            
             if (btnLogin.Text == "LOGIN" && txtPassword.Text != "" && txtUsername.Text != "")
             {
+                Kullanici kullanici = new Kullanici();  
+                kullanici.KullaniciAdi = txtUsername.Text;
+                kullanici.KullaniciPassword = txtPassword.Text;
+
+
                 MainMenu mainMenu = new MainMenu(txtPassword.Text, txtUsername.Text);
                 mainMenu.Show();
                 this.Hide();
             }
             else
             {
-                // db ye kiþi eklenicek
+                
             }
         }
 

@@ -10,6 +10,8 @@ namespace NutriGuide.Entity.Data
     public class Kullanici
     {
         public int KullaniciId { get; set; }
+        public string KullaniciAdi { get; set; } = "";
+        public string KullaniciPassword { get; set; } = "";
         public string? Ad { get; set; }
         public string? Soyad { get; set; }
         public string? Cinsiyet { get; set; }
