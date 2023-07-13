@@ -42,7 +42,9 @@
             lblYag = new Label();
             lblKarbonhidrat = new Label();
             dgvYemekler = new DataGridView();
+            dgvDiyetYemekleri = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)dgvYemekler).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvDiyetYemekleri).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -191,7 +193,15 @@
             dgvYemekler.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvYemekler.Size = new Size(721, 178);
             dgvYemekler.TabIndex = 15;
-            dgvYemekler.SelectionChanged += dgvYemekler_SelectionChanged;
+            // 
+            // dgvDiyetYemekleri
+            // 
+            dgvDiyetYemekleri.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvDiyetYemekleri.Location = new Point(329, 12);
+            dgvDiyetYemekleri.Name = "dgvDiyetYemekleri";
+            dgvDiyetYemekleri.RowTemplate.Height = 25;
+            dgvDiyetYemekleri.Size = new Size(380, 118);
+            dgvDiyetYemekleri.TabIndex = 16;
             // 
             // Besinler
             // 
@@ -199,6 +209,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(160, 191, 224);
             ClientSize = new Size(721, 381);
+            Controls.Add(dgvDiyetYemekleri);
             Controls.Add(dgvYemekler);
             Controls.Add(lblProtein);
             Controls.Add(lblYag);
@@ -218,6 +229,7 @@
             Name = "Besinler";
             Text = "Besinler";
             ((System.ComponentModel.ISupportInitialize)dgvYemekler).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvDiyetYemekleri).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -238,5 +250,6 @@
         private Label lblYag;
         private Label lblKarbonhidrat;
         private DataGridView dgvYemekler;
+        private DataGridView dgvDiyetYemekleri;
     }
 }

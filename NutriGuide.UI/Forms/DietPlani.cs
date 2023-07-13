@@ -18,8 +18,8 @@ namespace NutriGuide.UI.Forms
         {
             InitializeComponent();
             _kisi = kisi;
-            
-            dtpBaslama.MinDate = DateTime.Now;          
+
+            dtpBaslama.MinDate = DateTime.Now;
         }
 
         private void dtpBaslama_ValueChanged(object sender, EventArgs e)

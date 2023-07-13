@@ -38,6 +38,8 @@
             lstDiyetler = new ListBox();
             cmbDiyetler = new ComboBox();
             label3 = new Label();
+            textBox1 = new TextBox();
+            label4 = new Label();
             SuspendLayout();
             // 
             // label1
@@ -117,7 +119,7 @@
             // 
             cmbDiyetler.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbDiyetler.FormattingEnabled = true;
-            cmbDiyetler.Location = new Point(102, 43);
+            cmbDiyetler.Location = new Point(115, 104);
             cmbDiyetler.Name = "cmbDiyetler";
             cmbDiyetler.Size = new Size(210, 26);
             cmbDiyetler.TabIndex = 8;
@@ -125,11 +127,27 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(31, 48);
+            label3.Location = new Point(44, 109);
             label3.Name = "label3";
             label3.Size = new Size(65, 18);
             label3.TabIndex = 9;
             label3.Text = "Diyetler:";
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(115, 49);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(210, 26);
+            textBox1.TabIndex = 10;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(33, 52);
+            label4.Name = "label4";
+            label4.Size = new Size(76, 18);
+            label4.TabIndex = 11;
+            label4.Text = "Diyet Ismi";
             // 
             // DietPlani
             // 
@@ -137,6 +155,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(248, 253, 207);
             ClientSize = new Size(720, 381);
+            Controls.Add(label4);
+            Controls.Add(textBox1);
             Controls.Add(label3);
             Controls.Add(cmbDiyetler);
             Controls.Add(lstDiyetler);
@@ -167,5 +187,7 @@
         private ListBox lstDiyetler;
         private ComboBox cmbDiyetler;
         private Label label3;
+        private TextBox textBox1;
+        private Label label4;
     }
 }

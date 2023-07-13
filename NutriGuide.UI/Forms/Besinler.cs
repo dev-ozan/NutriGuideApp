@@ -15,6 +15,10 @@ namespace NutriGuide.UI.Forms
     public partial class Besinler : Form
     {
         Kullanici _kisi;
+        double toplamKalori = 0;
+        double karbonhidrat = 0;
+        double protein = 0;
+        double yag = 0;
         NutriGuideContext _db = new NutriGuideContext();
         public Besinler(Kullanici kisi)
         {
@@ -52,10 +56,7 @@ namespace NutriGuide.UI.Forms
 
         private void dgvYemekler_SelectionChanged(object sender, EventArgs e)
         {
-            double toplamKalori = 0;
-            double karbonhidrat = 0;
-            double protein = 0;
-            double yag = 0;
+            
             foreach (DataGridViewRow row in dgvYemekler.SelectedRows)
             {
                 Food selectedFood = (Food)row.DataBoundItem;
@@ -77,7 +78,7 @@ namespace NutriGuide.UI.Forms
 
         private void cmbDiyetler_SelectedIndexChanged(object sender, EventArgs e)
         {
-            dgvYemekler.DataSource = cmbDiyetler.SelectedItem;
+            dgvDiyetYemekleri.DataSource = cmbDiyetler.SelectedItem;
         }
     }
 }
