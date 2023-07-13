@@ -53,7 +53,7 @@ namespace NutriGuide.UI.Forms
                     _kisi.HedefKilosu = Convert.ToInt32(txtHedefKilo.Text);
                     string cinsiyet = cmbCinsiyet.SelectedItem.ToString();
                     _kisi.Cinsiyet = cinsiyet;
-                    MessageBox.Show(_kisi.Ad);
+                    
                     MessageBox.Show("Bilgileriniz Başarıyla Güncellendi");
                     _db.Update(_kisi);
                     _db.SaveChanges();
