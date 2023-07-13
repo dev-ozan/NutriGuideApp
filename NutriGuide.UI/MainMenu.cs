@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NutriGuide.Entity.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,7 +15,7 @@ namespace NutriGuide.UI
     {
         bool panelGizlimi = false;
         Form activeForm;
-        public MainMenu(string a, string b)
+        public MainMenu(string a)
         {
             InitializeComponent();
             lblKullaniciAd.Text = a.ToString();
@@ -45,12 +46,14 @@ namespace NutriGuide.UI
 
         private void btnAnaMenu_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.AnaMenu());
+
+            OpenChildForm(new Forms.AnaMenu(lblKullaniciAd.Text));
+               
         }
 
         private void btnProfile_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.Profile());
+            OpenChildForm(new Forms.Profile(lblKullaniciAd.Text));
         }
 
         private void btnDiyetPlan_Click(object sender, EventArgs e)

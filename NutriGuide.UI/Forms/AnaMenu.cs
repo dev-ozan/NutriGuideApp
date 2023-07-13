@@ -1,4 +1,6 @@
-﻿using System;
+﻿using NutriGuide.DataAccessLayer.Concrets;
+using NutriGuide.Entity.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,15 @@ namespace NutriGuide.UI.Forms
 {
     public partial class AnaMenu : Form
     {
-        public AnaMenu()
+        public AnaMenu(string a)
         {
             InitializeComponent();
+            using(NutriGuideContext _db = new NutriGuideContext())
+            {
+                var kisi = _db.Kullanicilar.FirstOrDefault(b => b.KullaniciAdi == a.ToString());
+                lblKullaniciAd.Text = kisi.KullaniciAdi.ToString();
+                lblAdSoyad.Text = kisi.Ad +" " +kisi.Soyad;
+            }
         }
     }
 }

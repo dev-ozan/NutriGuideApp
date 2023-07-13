@@ -140,6 +140,7 @@
             txtBoy.Name = "txtBoy";
             txtBoy.Size = new Size(182, 25);
             txtBoy.TabIndex = 9;
+            txtBoy.Text = "0";
             // 
             // txtKilo
             // 
@@ -148,6 +149,7 @@
             txtKilo.Name = "txtKilo";
             txtKilo.Size = new Size(182, 25);
             txtKilo.TabIndex = 10;
+            txtKilo.Text = "0";
             // 
             // txtHedefKilo
             // 
@@ -156,6 +158,7 @@
             txtHedefKilo.Name = "txtHedefKilo";
             txtHedefKilo.Size = new Size(182, 25);
             txtHedefKilo.TabIndex = 11;
+            txtHedefKilo.Text = "0";
             // 
             // dtpDogumTarih
             // 
@@ -189,7 +192,9 @@
             // 
             // cmbCinsiyet
             // 
+            cmbCinsiyet.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbCinsiyet.FormattingEnabled = true;
+            cmbCinsiyet.Items.AddRange(new object[] { "Erkek", "Kiz" });
             cmbCinsiyet.Location = new Point(142, 295);
             cmbCinsiyet.Name = "cmbCinsiyet";
             cmbCinsiyet.Size = new Size(182, 25);
@@ -203,6 +208,7 @@
             btnGuncelle.TabIndex = 16;
             btnGuncelle.Text = "EKLE";
             btnGuncelle.UseVisualStyleBackColor = true;
+            btnGuncelle.Click += btnGuncelle_Click;
             // 
             // Profile
             // 

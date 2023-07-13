@@ -10,17 +10,17 @@ namespace NutriGuide.Entity.Data
     public class Kullanici
     {
         public int KullaniciId { get; set; }
-        public string KullaniciAdi { get; set; } = "";
-        public string KullaniciPassword { get; set; } = "";
+        public string KullaniciAdi { get; set; }
+        public string KullaniciPassword { get; set; }
         public string? Ad { get; set; }
         public string? Soyad { get; set; }
         public string? Cinsiyet { get; set; }
         public DateTime DogumTarihi { get; set; }
         public DateTime DietBaslamaTarihi { get; set; }
         public DateTime DietBitisTarihi { get; set; }
-        public int Kilosu { get; set; }
-        public int Boyu { get; set; }
-        public int HedefKilosu { get; set; }
+        public int Kilosu { get; set; } = 0;
+        public int Boyu { get; set; } = 0;
+        public int HedefKilosu { get; set; } = 0;
         public KullaniciTipi KullaniciTipi { get; set; }
         public string? Diyetler { get; set; }
 
