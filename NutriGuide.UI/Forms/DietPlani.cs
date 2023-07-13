@@ -1,4 +1,5 @@
-﻿using NutriGuide.Entity.Data;
+﻿using NutriGuide.DataAccessLayer.Concrets;
+using NutriGuide.Entity.Data;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,11 +15,13 @@ namespace NutriGuide.UI.Forms
     public partial class DietPlani : Form
     {
         Kullanici _kisi;
+        NutriGuideContext db = new();
         public DietPlani(Kullanici kisi)
         {
             InitializeComponent();
             _kisi = kisi;
-
+            Dongu();
+            
             dtpBaslama.MinDate = DateTime.Now;
         }
 
@@ -29,7 +32,24 @@ namespace NutriGuide.UI.Forms
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
-            _kisi.Diyetler.
+            cmbDiyetler.Items.Clear();
+            Diyetler diyet = new Diyetler();
+            diyet.DiyetAdi = txtDiyetIsmi.Text;
+            _kisi.Diyetler.Add(diyet);
+            db.Kullanicilar.Update(_kisi);
+            db.SaveChanges();
+            Dongu();
+
         }
+        public void Dongu()
+        {
+            foreach (var item in _kisi.Diyetler)
+            {
+                
+                cmbDiyetler.DataSource = _kisi.Diyetler.ToList();
+                cmbDiyetler.DisplayMember = "DiyetAdi";
+            }
+        }
+        
     }
 }

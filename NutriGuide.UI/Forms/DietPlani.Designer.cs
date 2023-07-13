@@ -38,7 +38,7 @@
             lstDiyetler = new ListBox();
             cmbDiyetler = new ComboBox();
             label3 = new Label();
-            textBox1 = new TextBox();
+            txtDiyetIsmi = new TextBox();
             label4 = new Label();
             SuspendLayout();
             // 
@@ -134,12 +134,12 @@
             label3.TabIndex = 9;
             label3.Text = "Diyetler:";
             // 
-            // textBox1
+            // txtDiyetIsmi
             // 
-            textBox1.Location = new Point(115, 49);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(210, 26);
-            textBox1.TabIndex = 10;
+            txtDiyetIsmi.Location = new Point(115, 49);
+            txtDiyetIsmi.Name = "txtDiyetIsmi";
+            txtDiyetIsmi.Size = new Size(210, 26);
+            txtDiyetIsmi.TabIndex = 10;
             // 
             // label4
             // 
@@ -157,7 +157,7 @@
             BackColor = Color.FromArgb(248, 253, 207);
             ClientSize = new Size(720, 381);
             Controls.Add(label4);
-            Controls.Add(textBox1);
+            Controls.Add(txtDiyetIsmi);
             Controls.Add(label3);
             Controls.Add(cmbDiyetler);
             Controls.Add(lstDiyetler);
@@ -188,7 +188,7 @@
         private ListBox lstDiyetler;
         private ComboBox cmbDiyetler;
         private Label label3;
-        private TextBox textBox1;
+        private TextBox txtDiyetIsmi;
         private Label label4;
     }
 }
