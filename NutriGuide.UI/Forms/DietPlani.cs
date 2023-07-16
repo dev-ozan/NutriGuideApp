@@ -35,6 +35,7 @@ namespace NutriGuide.UI.Forms
             Diyetler diyet = new Diyetler();
             diyet.DiyetAdi = txtDiyetIsmi.Text;
             diyet.KullaniciId = _kisi.KullaniciId;
+
             _kisi.Diyetler.Add(diyet);
             db.Kullanicilar.Update(_kisi);
             db.SaveChanges();

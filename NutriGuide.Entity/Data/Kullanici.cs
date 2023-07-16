@@ -15,7 +15,7 @@ namespace NutriGuide.Entity.Data
         public string? Ad { get; set; }
         public string? Soyad { get; set; }
         public string? Cinsiyet { get; set; }
-        public DateTime DogumTarihi { get; set; }
+        public DateTime DogumTarihi { get; set; } = new DateTime(2000, 1, 1);
         public DateTime DietBaslamaTarihi { get; set; }
         public DateTime DietBitisTarihi { get; set; }
         public int Kilosu { get; set; } = 0;
@@ -23,8 +23,6 @@ namespace NutriGuide.Entity.Data
         public int HedefKilosu { get; set; } = 0;
         public KullaniciTipi KullaniciTipi { get; set; }
         public List<Diyetler> Diyetler { get; set; } = new();
-
-        public List<Food> Foods { get; set; } = new();
 
     }
 }
