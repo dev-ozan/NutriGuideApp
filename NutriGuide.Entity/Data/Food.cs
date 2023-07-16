@@ -18,9 +18,9 @@ namespace NutriGuide.Entity.Data
         public double Kalorisi { get; set; }
         
         public List<Diyetler> Diyetler { get; set; } = new();
-        //public override string ToString()
-        //{
-        //    return( Ad + "\t" + Cins + "\t" + ProteinMiktari + "\t" + KarbonhidratMiktari + "\t" + YagMiktari + "\t" + Kalorisi + "\t" );
-        //}
+        public override string ToString()
+        {
+            return Ad;
+        }
     }
 }
