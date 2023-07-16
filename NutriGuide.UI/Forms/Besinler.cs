@@ -37,18 +37,15 @@ namespace NutriGuide.UI.Forms
                     cmbDiyetler.Items.Add(item);
                 }
             }
+            DiyetYemekleriniListele();
+
 
         }
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
-            foreach (DataGridViewRow row in dgvYemekler.SelectedRows)
-            {
-                Food selectedFood = (Food)row.DataBoundItem;
-                _kisi.Foods.Add(selectedFood);
-                _db.Update(_kisi);
-                _db.SaveChanges();
-            }
+            DiyetlereYemekEkle();
+            DiyetYemekleriniListele();
 
 
         }
@@ -56,7 +53,7 @@ namespace NutriGuide.UI.Forms
 
         private void dgvYemekler_SelectionChanged(object sender, EventArgs e)
         {
-            
+
             foreach (DataGridViewRow row in dgvYemekler.SelectedRows)
             {
                 Food selectedFood = (Food)row.DataBoundItem;
@@ -78,15 +75,7 @@ namespace NutriGuide.UI.Forms
 
         private void cmbDiyetler_SelectedIndexChanged(object sender, EventArgs e)
         {
-            dgvDiyetYemekleri.DataBindingComplete += (o, _) =>
-            {
-                var dataGridView = o as DataGridView;
-                if (dataGridView != null)
-                {
-                    dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
-                    dataGridView.Columns[dataGridView.ColumnCount - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                }
-            };
+            DiyetYemekleriniListele();
         }
 
         public void Dongu()
@@ -95,6 +84,83 @@ namespace NutriGuide.UI.Forms
             {
                 cmbDiyetler.Items.Clear();
                 cmbDiyetler.Items.Add(item.DiyetAdi);
+            }
+
+        }
+        public void DiyetlereYemekEkle()
+        {
+
+            //Diyetler diyet = cmbDiyetler.SelectedItem as Diyetler;
+            //if (diyet != null)
+            //{
+            //    string foodName = dgvYemekler.SelectedRows[0].Cells[1].Value.ToString();
+            //    foreach (var item in _db.Foods)
+            //    {
+            //        if (foodName == item.Ad)
+            //        {
+
+            //            diyet.Yemekler.Add(item);
+            //            _kisi.Diyetler.Add(diyet);
+
+            //            _db.Update(_kisi);
+            //            _db.SaveChanges();
+
+            //        }
+            //    }
+            //}
+
+
+            var Diyetler = _db.Diyetler.Where(x => x.KullaniciId == _kisi.KullaniciId);
+
+            foreach (var item in Diyetler)
+            {
+
+                if (item.DiyetAdi.Contains(cmbDiyetler.SelectedItem.ToString()))
+                {
+                    string food = dgvYemekler.SelectedRows[0].Cells[1].Value.ToString();
+                    foreach (var item1 in _db.Foods)
+                    {
+                        if (item1.Ad == food)
+                        {
+                            item.Yemekler.Add(item1);
+                            _db.SaveChanges();
+
+                        }
+                    }
+
+                }
+            }
+
+
+        }
+        public void DiyetYemekleriniListele()
+        {
+            //Diyetler diyet = cmbDiyetler.SelectedItem as Diyetler;
+            //if (diyet != null)
+            //{
+            //    foreach (var item in _db.Diyetler)
+            //    {
+            //        if (diyet.KullaniciId == _kisi.KullaniciId && diyet.DiyetAdi == item.DiyetAdi)
+            //        {
+            //            dgvDiyetYemekleri.DataSource = item.Yemekler.ToList();
+            //        }
+            //    }
+            //}
+
+
+
+
+            var Diyetler = _db.Diyetler.Where(x => x.KullaniciId == _kisi.KullaniciId);
+            foreach (var item in Diyetler)
+            {
+                if (cmbDiyetler.SelectedIndex != -1)
+                    if (item.DiyetAdi.Contains(cmbDiyetler.SelectedItem.ToString()))
+                    {
+                        if (item.DiyetAdi != null)
+                            dgvDiyetYemekleri.DataSource = item.DiyetAdi.ToList();
+                    }
+
+
             }
 
         }
