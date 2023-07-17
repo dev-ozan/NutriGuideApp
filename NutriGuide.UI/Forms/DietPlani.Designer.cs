@@ -97,6 +97,7 @@
             btnSil.TabIndex = 5;
             btnSil.Text = "SİL";
             btnSil.UseVisualStyleBackColor = true;
+            btnSil.Click += btnSil_Click;
             // 
             // btnGuncelle
             // 
@@ -106,6 +107,7 @@
             btnGuncelle.TabIndex = 6;
             btnGuncelle.Text = "GÜNCELLE";
             btnGuncelle.UseVisualStyleBackColor = true;
+            btnGuncelle.Click += btnGuncelle_Click;
             // 
             // lstDiyetler
             // 

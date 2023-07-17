@@ -21,6 +21,7 @@ namespace NutriGuide.UI.Forms
         {
             InitializeComponent();
             _kisi = kisi;
+            listele();
             Dongu();
             dtpBaslama.MinDate = DateTime.Now;
         }
@@ -39,6 +40,9 @@ namespace NutriGuide.UI.Forms
             _kisi.Diyetler.Add(d1);
             _db.Update(_kisi);
             _db.SaveChanges();
+
+
+            listele();
             Dongu();
         }
         public void Dongu()
@@ -46,6 +50,59 @@ namespace NutriGuide.UI.Forms
             cmbDiyetler.DataSource = null;
             cmbDiyetler.DataSource = _db.Diyetler.Where(x => x.Kullanicilar.Any(k => k.KullaniciId == _kisi.KullaniciId)).ToList();
         }
+        void listele()
+        {
 
+
+            lstDiyetler.Items.Clear();
+            lstDiyetler.Update();
+            lstDiyetler.Refresh();
+            var kisiKullaniciId = _kisi.KullaniciId;
+            foreach (var item in _db.Diyetler.Where(x => x.Kullanicilar.Any(k => k.KullaniciId == kisiKullaniciId)))
+            {
+                lstDiyetler.Items.Add(item);
+            }
+
+        }
+
+
+
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            DiyetSil();
+            listele();
+        }
+
+
+
+
+
+        void DiyetSil()
+        {
+            Diyetler diyet = lstDiyetler.SelectedItem as Diyetler;
+            _db.Remove(diyet);
+            _db.SaveChanges();
+        }
+
+
+
+        private void btnGuncelle_Click(object sender, EventArgs e)
+        {
+            DiyetGuncelle();
+        }
+        void DiyetGuncelle()
+        {
+            if (lstDiyetler.SelectedIndex > -1)
+            {
+                Diyetler Diyet = lstDiyetler.SelectedItem as Diyetler;
+                _db.Diyetler.FirstOrDefault(x => x.DiyetAdi == Diyet.DiyetAdi).DiyetAdi = txtDiyetIsmi.Text;
+                _db.SaveChanges();
+                listele();
+
+            }
+
+
+        }
     }
 }
